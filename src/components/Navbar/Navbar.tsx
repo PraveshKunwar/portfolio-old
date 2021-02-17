@@ -4,19 +4,7 @@ import AboutMe from "../main/AboutMe";
 import Contact from "../main/Contact";
 
 const Navbar: React.FC = () => {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/about">
-          <AboutMe />
-        </Route>
-
-        <Route path="/contact">
-          <Contact />
-        </Route>
-      </Switch>
-    </Router>
-  );
+  return <div className="asd">asd</div>;
 };
 
 export default Navbar;
