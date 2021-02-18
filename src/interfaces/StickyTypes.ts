@@ -1,6 +1,5 @@
 export interface StickyTypes {
-  color: string;
-  width?: string;
-  height?: string;
-  margin?: string;
+	color: string;
+	font_size?: string;
+	margin?: string;
 }

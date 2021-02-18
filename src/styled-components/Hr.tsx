@@ -1,18 +1,14 @@
 import styled from 'styled-components';
-import { LinkTypes } from '../interfaces/LinkTypes';
-const Link = styled.a`
-	color: ${(props: LinkTypes) => (props.color ? props.color : false)};
-	font-family: 'Inter', 'Roboto', 'Oswald';
-	text-decoration: none;
-	&:active {
-		color: ${(props: LinkTypes) => (props.color ? props.color : false)};
-	}
-	&:visited {
-		color: ${(props: LinkTypes) => (props.color ? props.color : false)};
-	}
-	&:hover {
-		color: ${(props: LinkTypes) => (props.color ? props.color : false)};
-	}
+import { HrTypes } from '../interfaces/HrTypes';
+
+const Hr = styled.hr`
+	border: 8px solid;
+	border-color: ${(props: HrTypes) =>
+		props.init_color ? props.init_color : false};
+	border-radius: 5px;
+	transition: border-color 0.3s ease-in-out;
+	margin-top: 1rem;
+	width: 50%;
 	animation: fadeIn ease 2s;
 	-webkit-animation: fadeIn ease 2s;
 	-moz-animation: fadeIn ease 2s;
@@ -62,6 +58,13 @@ const Link = styled.a`
 			opacity: 1;
 		}
 	}
+	&:hover {
+		border-color: ${(props: HrTypes) =>
+			props.hover_color ? props.hover_color : '#333'};
+	}
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
-export default Link;
+export default Hr;

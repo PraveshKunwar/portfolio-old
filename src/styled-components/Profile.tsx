@@ -1,18 +1,14 @@
 import styled from 'styled-components';
-import { LinkTypes } from '../interfaces/LinkTypes';
-const Link = styled.a`
-	color: ${(props: LinkTypes) => (props.color ? props.color : false)};
-	font-family: 'Inter', 'Roboto', 'Oswald';
-	text-decoration: none;
-	&:active {
-		color: ${(props: LinkTypes) => (props.color ? props.color : false)};
-	}
-	&:visited {
-		color: ${(props: LinkTypes) => (props.color ? props.color : false)};
-	}
-	&:hover {
-		color: ${(props: LinkTypes) => (props.color ? props.color : false)};
-	}
+
+const Profile = styled.img`
+	margin-top: 10rem;
+	width: 256px;
+	height: 256px;
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1rem;
 	animation: fadeIn ease 2s;
 	-webkit-animation: fadeIn ease 2s;
 	-moz-animation: fadeIn ease 2s;
@@ -64,4 +60,4 @@ const Link = styled.a`
 	}
 `;
 
-export default Link;
+export default Profile;
