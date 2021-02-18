@@ -5,7 +5,7 @@ import { LandingTypes } from "../interfaces/LandingTypes";
 const LandingHeader = styled.h1`
   margin-top: 15rem;
   text-align: center;
-  font-family: "Inter";
+  font-family: "Inter", "Roboto", "Oswald";
   font-size: 45px;
   animation: fadeIn ease 2s;
   -webkit-animation: fadeIn ease 2s;

@@ -1,4 +1,3 @@
-import { createPortal } from "react-dom";
 import styled from "styled-components";
 import { WelcomeTypes } from "../interfaces/LandingTypes";
 import Colors from "../utils/Colors";

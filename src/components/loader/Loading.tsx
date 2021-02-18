@@ -11,7 +11,7 @@ const Loading: React.FC = () => {
           animation="border"
           role="status"
           id="spinner"
-          variant="info"
+          variant="primary"
         ></Spinner>
       </SpinnerCenter>
       <Welcome>Loading...</Welcome>

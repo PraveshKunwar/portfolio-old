@@ -1,7 +1,6 @@
 import React from "react";
-import LandingHeader from "../styled-components/LandingHeader";
-import Color from "../utils/Colors";
-
+import LandingHeader from "../../styled-components/LandingHeader";
+import Color from "../../utils/Colors";
 const Header: React.FC = () => {
   return (
     <div className="#header">
