@@ -3,6 +3,7 @@ import Header from '../components/section_1/Header';
 import ScrollToProjects from '../components/section_1/ScrollToProjects';
 import Projects from '../components/section_1/Projects';
 import Sticky from '../components/Sticky';
+import AboutMe from './AboutMe';
 
 const Home: React.FC = () => {
 	return (
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
 			<Sticky />
 			<Header />
 			<ScrollToProjects />
+			<AboutMe />
 			<Projects />
 		</div>
 	);

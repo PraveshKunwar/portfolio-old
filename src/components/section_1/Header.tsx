@@ -1,5 +1,5 @@
 import React from 'react';
-import LandingHeader from '../../styled-components/LandingHeader';
+import { LandingHeader } from '../../styled-components/Header';
 import Color from '../../utils/Colors';
 import Profile from '../../styled-components/Profile';
 import Image from '../../images/profile.jpg';
