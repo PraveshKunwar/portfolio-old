@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { HrTypes } from '../interfaces/HrTypes';
 
 const Hr = styled.hr`
+	opacity: 1;
 	border: 8px solid;
 	border-color: ${(props: HrTypes) =>
 		props.init_color ? props.init_color : false};
