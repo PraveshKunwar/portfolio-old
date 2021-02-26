@@ -10,7 +10,7 @@ const AboutHeader: React.FC = () => {
 				top="2rem"
 				weight={700}
 			>
-				1. About Me
+				1a. About Me
 			</AboutMeHeader>
 		</div>
 	);
