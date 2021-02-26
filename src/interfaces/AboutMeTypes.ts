@@ -7,3 +7,9 @@ export interface AboutMeTypes {
 	color: string;
 	size: string;
 }
+
+export interface AboutParaTypes {
+	size?: string;
+	top?: string;
+	color: string;
+}
