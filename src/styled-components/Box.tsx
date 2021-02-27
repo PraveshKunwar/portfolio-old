@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SFMono_Regular from '../assets/fonts/SFMono_Regular.otf';
 import { BoxTypes } from '../interfaces/BoxTypes';
 
-const Box = styled.div`
+export const Box = styled.div`
 	@font-face {
 		font-family: 'SF Mono';
 		src: local('SF Mono'), url(${SFMono_Regular});
@@ -23,8 +23,6 @@ const Box = styled.div`
 			props.radius ? props.radius : '10px'};
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		text-align: center;
-		font-family: 'SF Mono';
+		font-family: 'Inter', 'Roboto', 'Oswald', 'SF Mono';
 	}
 `;
-
-export default Box;
