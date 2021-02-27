@@ -4,4 +4,5 @@ export interface BoxTypes {
 	background: string;
 	size?: string;
 	color?: string;
+	radius?: string;
 }
