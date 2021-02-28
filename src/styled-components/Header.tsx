@@ -72,8 +72,12 @@ export const AboutMeHeader = styled.h2`
 	margin-top: ${(props: AboutMeTypes) => (props.top ? props.top : '1rem')};
 	margin-bottom: ${(props: AboutMeTypes) =>
 		props.bottom ? props.bottom : '1rem'};
+	transition: background 0.3s ease-in-out;
 	color: ${(props: AboutMeTypes) => (props.color ? props.color : false)};
 	font-size: ${(props: AboutMeTypes) => (props.size ? props.size : false)};
+	&:hover {
+		background: '#53c0c9';
+	}
 	animation: fadeIn ease 3s;
 	-webkit-animation: fadeIn ease 3s;
 	-moz-animation: fadeIn ease 3s;

@@ -12,7 +12,9 @@ export const Box = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
+	flex-wrap: wrap;
 	> div {
+		margin: 30px;
 		width: ${(props: BoxTypes) => (props.width ? props.width : false)};
 		height: ${(props: BoxTypes) => (props.height ? props.height : false)};
 		background: ${(props: BoxTypes) =>
