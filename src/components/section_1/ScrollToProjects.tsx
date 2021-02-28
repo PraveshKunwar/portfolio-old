@@ -8,7 +8,7 @@ const ScrollToProjects: React.FC = () => {
 	return (
 		<div>
 			<ScrollTo className="?scroll_to">
-				<Link color={Colors.slate} href="#projects">
+				<Link data-scroll color={Colors.slate} href="#projects">
 					<ArrowDownwardIcon fontSize="large" />
 					<br></br>
 					<p>Projects</p>
