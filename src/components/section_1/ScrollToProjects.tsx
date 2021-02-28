@@ -13,7 +13,7 @@ const ScrollToProjects: React.FC = () => {
 					<br></br>
 					<p>Projects</p>
 				</Link>
-				<Hr init_color={Colors.slate} hover_color={Colors.turqoise_main} />
+				<Hr init_color={Colors.slate} hover_color={Colors.gold} />
 			</ScrollTo>
 		</div>
 	);

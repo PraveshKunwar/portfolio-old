@@ -4,7 +4,7 @@ const Header = lazy(() => import('../components/section_1/Header'));
 const ScrollToProjects = lazy(
 	() => import('../components/section_1/ScrollToProjects')
 );
-const Projects = lazy(() => import('../components/section_1/Projects'));
+const Projects = lazy(() => import('../components/section_3/Projects'));
 const Sticky = lazy(() => import('../components/Sticky'));
 const AboutMe = lazy(() => import('./AboutMe'));
 

@@ -12,6 +12,7 @@ import {
 	Node,
 	Bss,
 } from '../../assets/svg/SVG_Icons';
+import Hr from '../../styled-components/Hr';
 const Personal: React.FC = () => {
 	return (
 		<div className="?work">
@@ -57,7 +58,7 @@ const Personal: React.FC = () => {
 			</AboutMeHeader>
 			<Box
 				width="400px"
-				height="250px"
+				height="300px"
 				background={Colors.lighter_navy}
 				color={Colors.dark_slate_border_purple}
 				size="16px"
@@ -184,6 +185,7 @@ const Personal: React.FC = () => {
 						MongoDB.
 					</p>
 				</div>
+				<Hr init_color={Colors.slate} hover_color={Colors.gold} />
 			</Box>
 		</div>
 	);
