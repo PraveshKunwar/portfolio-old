@@ -11,7 +11,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 
 const Sticky: React.FC = () => {
 	return (
-		<StickyLinks color={Colors.turqoise_main} className="?stick_links">
+		<StickyLinks color={Colors.pink_main} className="?stick_links">
 			<div>
 				<Link
 					href={Socials.github}

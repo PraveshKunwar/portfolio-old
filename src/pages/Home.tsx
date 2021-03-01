@@ -12,7 +12,6 @@ const Home: React.FC = () => {
 	return (
 		<div className="#home">
 			<Suspense fallback={<div>Loading...</div>}>
-				{' '}
 				<Sticky />
 				<Header />
 				<ScrollToProjects />

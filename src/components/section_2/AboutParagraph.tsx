@@ -7,7 +7,7 @@ const AboutParagraph: React.FC = () => {
 		<div className="?about_me_text">
 			<Box
 				width="600px"
-				height="300px"
+				height="325px"
 				background={Colors.lighter_navy}
 				color={Colors.pink_main}
 				size="16px"

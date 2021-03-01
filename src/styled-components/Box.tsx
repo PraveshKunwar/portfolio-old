@@ -15,6 +15,8 @@ export const Box = styled.div`
 	flex-wrap: wrap;
 	> div {
 		margin: 30px;
+		margin-bottom: ${(props: BoxTypes) =>
+			props.bottom ? props.bottom : false};
 		width: ${(props: BoxTypes) => (props.width ? props.width : false)};
 		height: ${(props: BoxTypes) => (props.height ? props.height : false)};
 		background: ${(props: BoxTypes) =>

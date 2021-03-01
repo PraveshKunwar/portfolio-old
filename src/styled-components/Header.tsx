@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { LandingTypes } from '../interfaces/LandingTypes';
 import { AboutMeTypes } from '../interfaces/AboutMeTypes';
+import { ProjectTypes } from '../interfaces/ProjectTypes';
 
 export const LandingHeader = styled.h1`
 	text-align: center;
@@ -83,6 +84,67 @@ export const AboutMeHeader = styled.h2`
 	-moz-animation: fadeIn ease 3s;
 	-o-animation: fadeIn ease 3s;
 	-ms-animation: fadeIn ease 3s;
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-moz-keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-o-keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@-ms-keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+`;
+
+export const ProjectHeader = styled.h2`
+	text-align: center;
+	font-family: 'Inter', 'Roboto', 'Oswald';
+	font-weight: ${(props: ProjectTypes) => (props.weight ? props.weight : 400)};
+	margin-top: ${(props: ProjectTypes) => (props.top ? props.top : '1rem')};
+	margin-bottom: ${(props: ProjectTypes) =>
+		props.bottom ? props.bottom : '1rem'};
+	transition: background 0.3s ease-in-out;
+	color: ${(props: ProjectTypes) => (props.color ? props.color : false)};
+	font-size: ${(props: ProjectTypes) => (props.size ? props.size : false)};
+	animation: fadeIn ease 4s;
+	-webkit-animation: fadeIn ease 4s;
+	-moz-animation: fadeIn ease 4s;
+	-o-animation: fadeIn ease 4s;
+	-ms-animation: fadeIn ease 4s;
 	@keyframes fadeIn {
 		0% {
 			opacity: 0;
