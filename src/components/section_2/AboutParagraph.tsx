@@ -28,6 +28,22 @@ const AboutParagraph: React.FC = () => {
 						passion, and something that I look forward to doing everyday.
 					</AboutMeParagraph>
 				</div>
+				<div className="?about_me_box_2">
+					<AboutMeParagraph
+						color={Colors.dark_slate_border_purple}
+						style={{ marginTop: '4rem' }}
+					>
+						<b style={{ color: Colors.pink_main }}>▹ More Info: </b>
+						As I was wandering around on my laptop at 13 years old, I saw this
+						programming ad on Web Development. Curious, I clicked on the ad and
+						lead me to the infamous website Codeacademy.com.
+						<br></br>
+						<br></br>I started a course on HTML and I loved it. I soon got the
+						hang of it and moved on to CSS. I learned JavaScript later and loved
+						the language. Now, I spend my time from creating websites with
+						React.JS or Discord bots with Discord.JS and TypeScript! ♥
+					</AboutMeParagraph>
+				</div>
 			</Box>
 		</div>
 	);

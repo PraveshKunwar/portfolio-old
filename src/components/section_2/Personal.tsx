@@ -22,7 +22,7 @@ const Personal: React.FC = () => {
 				top="2rem"
 				weight={700}
 			>
-				1b. Work
+				1b. Work and Extracirriculars
 			</AboutMeHeader>
 			<Box
 				width="400px"
@@ -30,6 +30,7 @@ const Personal: React.FC = () => {
 				background={Colors.lighter_navy}
 				color={Colors.dark_slate_border_purple}
 				size="16px"
+				radius="0px"
 			>
 				<div className="?work_box">
 					{[
@@ -47,6 +48,24 @@ const Personal: React.FC = () => {
 						);
 					})}
 				</div>
+				<div className="?work_ec's">
+					<p style={{ marginTop: '10px' }}>
+						{[
+							'National Honors Society',
+							'Marching Band',
+							'Tennis',
+							'Robotics Club',
+							'Gaming Club',
+							'Martial Arts',
+						].map((ec, i) => {
+							return (
+								<p>
+									<b style={{ color: Colors.pink_main }}>▹ </b> {ec}
+								</p>
+							);
+						})}
+					</p>
+				</div>
 			</Box>
 			<AboutMeHeader
 				color={Colors.dark_slate_border_purple}
@@ -62,6 +81,7 @@ const Personal: React.FC = () => {
 				background={Colors.lighter_navy}
 				color={Colors.dark_slate_border_purple}
 				size="16px"
+				radius="0px"
 			>
 				<div className="?lang_html">
 					<Html />
@@ -185,7 +205,7 @@ const Personal: React.FC = () => {
 						MongoDB.
 					</p>
 				</div>
-				<Hr init_color={Colors.slate} hover_color={Colors.gold} />
+				<Hr init_color={Colors.slate} hover_color={Colors.pinkish_purp} />
 			</Box>
 		</div>
 	);

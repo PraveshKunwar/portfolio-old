@@ -28,9 +28,5 @@ export const Box = styled.div`
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		text-align: center;
 		font-family: 'Inter', 'Roboto', 'Oswald', 'SF Mono';
-		transition: transform 0.3s ease-in-out;
-		&:hover {
-			transform: translateY(-3px) scale(1.05);
-		}
 	}
 `;

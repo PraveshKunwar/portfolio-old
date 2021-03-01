@@ -132,7 +132,7 @@ const Projects: React.FC = () => {
 						weight={700}
 						bottom="2rem"
 					>
-						Spotifibe
+						SpotiFibe
 					</ProjectHeader>
 					<p style={{ color: Colors.lighter_pink }}>
 						<b style={{ color: Colors.slate }}>▹ </b>
