@@ -8,6 +8,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import DescriptionIcon from '@material-ui/icons/Description';
 
 const Sticky: React.FC = () => {
 	return (
@@ -15,7 +16,7 @@ const Sticky: React.FC = () => {
 			<div>
 				<Link
 					href={Socials.github}
-					color={Colors.turqoise_main}
+					color={Colors.pink_main}
 					rel="noreferrer"
 					target="_blank"
 				>
@@ -25,7 +26,7 @@ const Sticky: React.FC = () => {
 			<div>
 				<Link
 					href={Socials.instagram}
-					color={Colors.turqoise_main}
+					color={Colors.pink_main}
 					rel="noreferrer"
 					target="_blank"
 				>
@@ -35,7 +36,7 @@ const Sticky: React.FC = () => {
 			<div>
 				<Link
 					href={Socials.youtube}
-					color={Colors.turqoise_main}
+					color={Colors.pink_main}
 					rel="noreferrer"
 					target="_blank"
 				>
@@ -45,7 +46,7 @@ const Sticky: React.FC = () => {
 			<div>
 				<Link
 					href={Socials.twitter}
-					color={Colors.turqoise_main}
+					color={Colors.pink_main}
 					rel="noreferrer"
 					target="_blank"
 				>

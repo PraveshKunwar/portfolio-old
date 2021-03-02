@@ -1,7 +1,9 @@
 import React from 'react';
 import { AboutMeParagraph } from '../../styled-components/Paragraph';
 import Colors from '../../utils/Colors';
+import Hr from '../../styled-components/Hr';
 import { Box } from '../../styled-components/Box';
+import { ShowMore } from '../../styled-components/Button';
 const AboutParagraph: React.FC = () => {
 	return (
 		<div className="?about_me_text">
@@ -11,6 +13,7 @@ const AboutParagraph: React.FC = () => {
 				background={Colors.lighter_navy}
 				color={Colors.pink_main}
 				size="16px"
+				radius="0px"
 			>
 				<div className="?about_me_box">
 					<AboutMeParagraph
@@ -36,12 +39,13 @@ const AboutParagraph: React.FC = () => {
 						<b style={{ color: Colors.pink_main }}>▹ More Info: </b>
 						As I was wandering around on my laptop at 13 years old, I saw this
 						programming ad on Web Development. Curious, I clicked on the ad and
-						lead me to the infamous website Codeacademy.com.
+						lead me to the infamous website Codeacademy.com. Soon enough, I got
+						into web development.
 						<br></br>
-						<br></br>I started a course on HTML and I loved it. I soon got the
-						hang of it and moved on to CSS. I learned JavaScript later and loved
-						the language. Now, I spend my time from creating websites with
-						React.JS or Discord bots with Discord.JS and TypeScript! ♥
+						<br></br>
+						<b style={{ color: Colors.pink_main }}>▹</b>Now, with my current
+						knowledge, I spend a lot of my time from creating websites with
+						React.JS or Discord bots.
 					</AboutMeParagraph>
 				</div>
 			</Box>

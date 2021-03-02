@@ -22,7 +22,7 @@ const Personal: React.FC = () => {
 				top="2rem"
 				weight={700}
 			>
-				1b. Work and Extracirriculars
+				Work and Extracirriculars
 			</AboutMeHeader>
 			<Box
 				width="400px"
@@ -73,7 +73,7 @@ const Personal: React.FC = () => {
 				top="2rem"
 				weight={700}
 			>
-				1c. Programming Languages
+				Programming Languages
 			</AboutMeHeader>
 			<Box
 				width="400px"

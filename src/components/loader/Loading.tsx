@@ -9,7 +9,7 @@ const Loading: React.FC = () => {
 		setFinal(true);
 		setTimeout(() => {
 			setFinal(false);
-		}, 5000);
+		}, 3000);
 	}, []);
 	return (
 		<div className="#loading...">
@@ -21,7 +21,7 @@ const Loading: React.FC = () => {
 					variant="danger"
 				></Spinner>
 			</SpinnerCenter>
-			{final ? <Welcome>Loading...</Welcome> : false}
+			{final ? <Welcome>...</Welcome> : false}
 		</div>
 	);
 };
