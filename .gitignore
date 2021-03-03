@@ -4,8 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-./server/node_modules
-./server/dist
+/server/node_modules
+/server/dist
 
 # testing
 /coverage
@@ -25,3 +25,4 @@ yarn-debug.log*
 yarn-error.log*
 
 src/reportWebVitals.ts
+.vercel

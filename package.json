@@ -33,15 +33,15 @@
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
-		"install": "yarn install",
+		"install": "npm install",
 		"start:client": "react-scripts start",
 		"build:client": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"build:server": "cd server && tsc",
 		"start:server": "cd server && node dist/js/app.js",
-		"start": "concurrently \"yarn start:server\" \"yarn start:client\"",
-		"build": "concurrently \"yarn build:server\" \"yarn build:client\""
+		"start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+		"build": "concurrently \"npm run build:server\" \"npm run build:client\""
 	},
 	"eslintConfig": {
 		"extends": [
