@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"esModuleInterop": true,
 		"target": "ESNext",
+		"lib": ["ES2020", "ESNext"],
 		"module": "CommonJS",
 		"outDir": "dist/js",
 		"rootDir": "../server",
