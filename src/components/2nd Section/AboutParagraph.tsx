@@ -1,9 +1,7 @@
 import React from 'react';
 import { AboutMeParagraph } from '../../styled-components/Paragraph';
 import Colors from '../../utils/Colors';
-import Hr from '../../styled-components/Hr';
 import { Box } from '../../styled-components/Box';
-import { ShowMore } from '../../styled-components/Button';
 const AboutParagraph: React.FC = () => {
 	return (
 		<div className="?about_me_text">

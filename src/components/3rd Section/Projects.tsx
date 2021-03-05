@@ -5,10 +5,17 @@ import Link from '../../styled-components/Link';
 import Colors from '../../utils/Colors';
 import GithubProjects from '../../utils/GithubProjects';
 import { Git } from '../../assets/svg/SVG_Icons';
-import fetch from 'node-fetch';
 
 const Projects: React.FC = () => {
-	useEffect(() => {}, []);
+	useEffect(() => {
+		fetch('/api/dummy')
+			.then((res) => {
+				return res.json();
+			})
+			.then((data) => {
+				console.log(data);
+			});
+	}, []);
 	return (
 		<div className="?projects">
 			<ProjectHeader

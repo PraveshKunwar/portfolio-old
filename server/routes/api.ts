@@ -6,12 +6,6 @@ router.get('/resume', (req: Request, res: Response) => {
 	res.sendFile(resolve(__dirname, '../static', 'resume.pdf'));
 });
 
-router.get('/dummy', (req: Request, res: Response) => {
-	const obj = {
-		key: 'value',
-		key2: 'val',
-	};
-	res.json(obj);
-});
+router.get('/dummy', (req: Request, res: Response) => {});
 
 module.exports = router;
