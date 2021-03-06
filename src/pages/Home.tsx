@@ -1,9 +1,9 @@
 import React from 'react';
-import AboutHeader from '../components/2nd Section/AboutHeader';
-import AboutParagraph from '../components/2nd Section/AboutParagraph';
-import Header from '../components/1st Section/Header';
-import ScrollToProjects from '../components/1st Section/ScrollToProjects';
-import Projects from '../components/3rd Section/Projects';
+import AboutHeader from '../components/AboutHeader';
+import AboutParagraph from '../components/AboutParagraph';
+import Header from '../components/Header';
+import ScrollToProjects from '../components/ScrollToProjects';
+import Projects from '../components/Projects';
 import Sticky from '../components/Sticky';
 import { ShowMore } from '../styled-components/Button';
 import Hr from '../styled-components/Hr';

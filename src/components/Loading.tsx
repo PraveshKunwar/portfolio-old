@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
-import Welcome from '../../styled-components/Welcome';
-import SpinnerCenter from '../../styled-components/SpinnerCenter';
+import Welcome from '../styled-components/Welcome';
+import SpinnerCenter from '../styled-components/SpinnerCenter';
 
 const Loading: React.FC = () => {
 	const [final, setFinal] = useState(false);

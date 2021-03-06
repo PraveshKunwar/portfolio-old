@@ -1,18 +1,9 @@
 import React from 'react';
-import { AboutMeHeader } from '../../styled-components/Header';
-import Colors from '../../utils/Colors';
-import { Box } from '../../styled-components/Box';
-import {
-	Html,
-	Css,
-	Js,
-	ReactJS,
-	Ts,
-	Mongo,
-	Node,
-	Bss,
-} from '../../assets/svg/SVG_Icons';
-import Hr from '../../styled-components/Hr';
+import { AboutMeHeader } from '../styled-components/Header';
+import Colors from '../utils/Colors';
+import { Box } from '../styled-components/Box';
+import { Html, Css, Js, ReactJS, Ts, Mongo, Node, Bss } from './svg/SVG_Icons';
+import Hr from '../styled-components/Hr';
 const Personal: React.FC = () => {
 	return (
 		<div className="?work">

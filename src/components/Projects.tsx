@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { ProjectHeader } from '../../styled-components/Header';
-import { Box } from '../../styled-components/Box';
-import Link from '../../styled-components/Link';
-import Colors from '../../utils/Colors';
-import GithubProjects from '../../utils/GithubProjects';
-import { Git } from '../../assets/svg/SVG_Icons';
+import { ProjectHeader } from '../styled-components/Header';
+import { Box } from '../styled-components/Box';
+import Link from '../styled-components/Link';
+import Colors from '../utils/Colors';
+import GithubProjects from '../utils/GithubProjects';
+import { Git } from '../assets/svg/SVG_Icons';
 
 const Projects: React.FC = () => {
 	useEffect(() => {

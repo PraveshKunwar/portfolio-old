@@ -1,5 +1,5 @@
 import React from 'react';
-import Personal from '../components/2nd Section/Personal';
+import Personal from '../assets/Personal';
 import Sticky from '../components/Sticky';
 function AboutMe() {
 	return (

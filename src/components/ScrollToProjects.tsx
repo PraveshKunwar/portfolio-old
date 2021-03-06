@@ -1,9 +1,9 @@
 import React from 'react';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import ScrollTo from '../../styled-components/ScrollTo';
-import Link from '../../styled-components/Link';
-import Colors from '../../utils/Colors';
-import Hr from '../../styled-components/Hr';
+import ScrollTo from '../styled-components/ScrollTo';
+import Link from '../styled-components/Link';
+import Colors from '../utils/Colors';
+import Hr from '../styled-components/Hr';
 const ScrollToProjects: React.FC = () => {
 	return (
 		<div>

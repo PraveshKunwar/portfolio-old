@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Loading from './components/Loader/Loading';
+import Loading from './components/Loading';
 import Routes from './routes/Routes';
 import SmoothScroll from 'smooth-scroll';
 const App: React.FC = () => {

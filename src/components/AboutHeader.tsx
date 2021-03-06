@@ -1,6 +1,6 @@
 import React from 'react';
-import { AboutMeHeader } from '../../styled-components/Header';
-import Colors from '../../utils/Colors';
+import { AboutMeHeader } from '../styled-components/Header';
+import Colors from '../utils/Colors';
 const AboutHeader: React.FC = () => {
 	return (
 		<div className="#aboutme_header">
