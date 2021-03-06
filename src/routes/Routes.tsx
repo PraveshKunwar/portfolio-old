@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from '../pages/Home';
 import AboutMe from '../pages/AboutMe';
 import Contact from '../pages/Contact';
+import Resume from '../components/Resume';
 
 const Routes = () => {
 	return (
@@ -16,6 +17,9 @@ const Routes = () => {
 				</Route>
 				<Route path="/contact">
 					<Contact />
+				</Route>
+				<Route path="/resume">
+					<Resume />
 				</Route>
 			</Switch>
 		</Router>

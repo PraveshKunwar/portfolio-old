@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Loading from './components/Loading';
 import Routes from './routes/Routes';
+//@ts-ignore
 import SmoothScroll from 'smooth-scroll';
 const App: React.FC = () => {
 	const [loading, setLoading] = useState(false);

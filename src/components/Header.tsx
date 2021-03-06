@@ -2,11 +2,12 @@ import React from 'react';
 import { LandingHeader } from '../styled-components/Header';
 import Color from '../utils/Colors';
 import Profile from '../styled-components/Profile';
-import Image from '../../assets/images/profile.jpg';
+//@ts-ignore
+import image from '../assets/images/profile.jpg';
 const Header: React.FC = () => {
 	return (
 		<div className="#header">
-			<Profile src={Image} />
+			<Profile src={image} />
 			<LandingHeader h1_color={Color.slate} b_color={Color.pink_main}>
 				Hi, my name is Pravesh Kunwar. <br></br>
 				<b>I create things with code.</b>
