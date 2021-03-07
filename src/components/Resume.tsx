@@ -1,23 +1,8 @@
 import React, { useState } from 'react';
-import { Document, Page } from 'react-pdf';
+import { Document, Page, pdfjs } from 'react-pdf';
+//@ts-ignore
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-const Resume: React.FC = () => {
-	const [numPages, setNumPages] = useState(null);
-	const [pageNumber, setPageNumber] = useState(1);
-	const onSuccess = () => {
-		setNumPages(numPages);
-	};
-	return (
-		<div className="#resume">
-			<Document onLoadSuccess={onSuccess}>
-				{' '}
-				<Page pageNumber={pageNumber} />
-			</Document>
-			<p>
-				Page {pageNumber} of {numPages}
-			</p>
-		</div>
-	);
-};
+const Resume = () => {};
 
 export default Resume;
