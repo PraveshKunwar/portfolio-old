@@ -13,6 +13,7 @@ import {
 	Bss,
 } from '../assets/svg/SVG_Icons';
 import Hr from '../styled-components/Hr';
+import { colors } from '@material-ui/core';
 const Personal: React.FC = () => {
 	return (
 		<div className="?work">
@@ -32,38 +33,35 @@ const Personal: React.FC = () => {
 				size="16px"
 				radius="0px"
 			>
-				<div className="?work_box">
-					{[
-						'Kroger | 2019 - Present',
-						'Ultimatum | 2021 - Present',
-						'AccelerateKID | Soon...',
-					].map((work: string, i) => {
-						return (
-							<ul style={{ marginTop: '3rem' }}>
-								<li style={{ listStyleType: 'none' }} key={i}>
-									<b style={{ color: Colors.pink_main }}>▹ </b>
-									{work}
-								</li>
-							</ul>
-						);
-					})}
+				<div className="?work_box_1">
+					<p style={{ marginTop: '1rem' }}>
+						<b style={{ color: Colors.pink_main }}>▹ </b>Ultimatum | 2021 -
+						Present
+					</p>
+					<p>
+						My personal Discord Bot. Worked with a group of contributors on this
+						project, planned out commands and events to make this Discord Bot!
+						(In the works!)
+					</p>
+				</div>
+				<div className="?work_box_2">
+					<p style={{ marginTop: '1rem' }}>
+						<b style={{ color: Colors.pink_main }}>▹ </b>Socialistic | 2020 -
+						Present
+					</p>
+					<p>
+						Socialistic is a group project to allow people to give a description
+						about themselves with their social medias, with one click of a link!
+						(Not started yet, but coming soon!)
+					</p>
 				</div>
 				<div className="?work_ec's">
-					<p style={{ marginTop: '10px' }}>
-						{[
-							'National Honors Society',
-							'Marching Band',
-							'Tennis',
-							'Robotics Club',
-							'Gaming Club',
-							'Martial Arts',
-						].map((ec, i) => {
-							return (
-								<p>
-									<b style={{ color: Colors.pink_main }}>▹ </b> {ec}
-								</p>
-							);
-						})}
+					<p style={{ marginTop: '1rem' }}>
+						<b style={{ color: Colors.pink_main }}>▹ </b> Extracirriculars
+					</p>
+					<p>
+						National Honors Society, Marching Band, Tennis', Robotics Club,
+						Gaming Club, Martial Arts, Business (Socialistic and Ultimatum).
 					</p>
 				</div>
 			</Box>
@@ -77,11 +75,11 @@ const Personal: React.FC = () => {
 			</AboutMeHeader>
 			<Box
 				width="400px"
-				height="300px"
+				height="350px"
 				background={Colors.lighter_navy}
 				color={Colors.dark_slate_border_purple}
 				size="16px"
-				radius="0px"
+				radius="10px"
 			>
 				<div className="?lang_html">
 					<Html />
@@ -110,7 +108,10 @@ const Personal: React.FC = () => {
 					<p>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Info: </b>CSS, a language I am experienced in as well, with a
-						slight love hate relationship.
+						slight love hate relationship.<br></br>
+						<br></br>
+						<b style={{ color: Colors.pink_main }}>▹ </b>External - Framer
+						Motion, Chakra UI, Bulma.
 					</p>
 				</div>
 				<div className="?lang_js">
@@ -156,7 +157,11 @@ const Personal: React.FC = () => {
 					<p>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Info: </b>React, an amazing JavaScript framework that makes web
-						dev a lot easier! I am quite experienced in this sweet framework.
+						dev a lot easier! I am quite experienced in this sweet framework.{' '}
+						<br></br>
+						<br></br>
+						<b style={{ color: Colors.pink_main }}>▹ </b>External - Redux,
+						GraphQL, Next.JS
 					</p>
 				</div>
 				<div className="?lang_node">

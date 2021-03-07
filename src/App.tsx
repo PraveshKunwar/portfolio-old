@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Loading from './components/Loading';
-import Routes from './routes/Routes';
+import Routes from './router/Routes';
 //@ts-ignore
 import SmoothScroll from 'smooth-scroll';
 const App: React.FC = () => {
