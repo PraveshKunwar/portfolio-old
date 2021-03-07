@@ -7,6 +7,8 @@
 		"outDir": "dist/js",
 		"rootDir": "../server",
 		"strict": true,
-		"forceConsistentCasingInFileNames": true
+		"forceConsistentCasingInFileNames": true,
+		"typeRoots": ["./src/@types"],
+		"types": ["node"]
 	}
 }
