@@ -8,7 +8,7 @@
 		"rootDir": "../server",
 		"strict": true,
 		"forceConsistentCasingInFileNames": true,
-		"typeRoots": ["./src/@types"],
+		"typeRoots": ["../env.d.ts"],
 		"types": ["node"]
 	}
 }

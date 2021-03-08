@@ -6,6 +6,8 @@
 .pnp.js
 /server/dist
 /server/node_modules
+/server/.env
+/server/secrets.ts
 /public
 # testing
 /coverage
