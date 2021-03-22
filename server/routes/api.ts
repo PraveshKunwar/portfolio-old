@@ -22,7 +22,7 @@ router.get('/github', async (req: Request, res: Response) => {
 	await fetch(
 		'https://api.github.com/repos/PraveshKunwar/Ultimatum/commits/master'
 	)
-		.then((resp) => resp.json())
+		.then((resp: any) => resp.json())
 		.then((data: GithubTypes) => res.send(data));
 });
 
