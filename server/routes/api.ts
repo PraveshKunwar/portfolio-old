@@ -6,28 +6,28 @@ require('dotenv').config();
 
 const token = process.env.GITHUB_TOKEN || GITHUB;
 const query = `
-	query {
-			repository(name: "Ultimatum", owner: "PraveshKunwar") {
-				defaultBranchRef {
-					target {
-						... on Commit {
-							history(first: 1) {
-								nodes {
-									message
-									committedDate
-									authoredDate
-									oid
-									author {
-										email
-										name
-									}
-								}
-							}
-						}
-					}
+query {
+	repository(name: "linux", owner: "torvalds") {
+	  defaultBranchRef {
+		target {
+		  ... on Commit {
+			history(first: 1) {
+			  nodes {
+				message
+				committedDate
+				authoredDate
+				oid
+				author {
+				  email
+				  name
 				}
+			  \}
 			}
+		  }
+		}
+	  }
 	}
+  }
 `;
 router.get('/dummy', (req: Request, res: Response) => {
 	res.send('hello world');
