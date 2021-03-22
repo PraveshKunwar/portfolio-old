@@ -39,7 +39,7 @@
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
-		"install": "npm install",
+		"server:install": "cd server && npm install",
 		"start:client": "react-scripts start",
 		"build:client": "react-scripts build",
 		"test": "react-scripts test",
@@ -47,7 +47,8 @@
 		"build:server": "cd server && tsc",
 		"start:server": "cd server && nodemon dist/js/app.js",
 		"start": "concurrently \"npm run start:server\" \"npm run start:client\"",
-		"build": "concurrently \"npm run build:server\" \"npm run build:client\""
+		"build": "concurrently \"npm run build:server\" \"npm run build:client\"",
+		"install": "concurrently \"npm install\" \"npm run server:install\""
 	},
 	"eslintConfig": {
 		"extends": [
