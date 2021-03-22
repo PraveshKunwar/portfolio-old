@@ -1,7 +1,7 @@
 {
 	"name": "server",
 	"version": "1.0.0",
-	"main": "server/dist/js/app.js",
+	"main": "app.js",
 	"license": "MIT",
 	"dependencies": {
 		"@types/node-fetch": "^2.5.8",
@@ -14,8 +14,8 @@
 	},
 	"scripts": {
 		"client:install": "npm install --prefix client",
-		"start": "node server/dist/js/app.js",
-		"server": "nodemon server/dist/js/app.js",
+		"start": "node app.js",
+		"server": "nodemon app.js",
 		"client": "npm start --prefix client",
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
 		"postinstall": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
