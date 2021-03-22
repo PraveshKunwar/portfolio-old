@@ -1,37 +1,29 @@
 import express, { Request, Response, Router } from 'express';
-import { GITHUB } from '../secrets';
 import fetch from 'node-fetch';
 const router: Router = express.Router();
 require('dotenv').config();
 
-const token = process.env.GITHUB_TOKEN || GITHUB;
-const query = `
-query {
-	repository(name: "linux", owner: "torvalds") {
-	  defaultBranchRef {
-		target {
-		  ... on Commit {
-			history(first: 1) {
-			  nodes {
-				message
-				committedDate
-				authoredDate
-				oid
-				author {
-				  email
-				  name
-				}
-			  \}
-			}
-		  }
-		}
-	  }
-	}
-  }
-`;
-router.get('/dummy', (req: Request, res: Response) => {
-	res.send('hello world');
+// from src/interfaces/FetchTypes;
+interface GithubTypes {
+	author: object;
+	comments_url: string;
+	commit: object;
+	commiter: object;
+	files: Array<object>;
+	html_url: string;
+	node_id: string;
+	parents: Array<object>;
+	sha: string;
+	stats: object;
+	url: string;
+}
+
+router.get('/github', async (req: Request, res: Response) => {
+	await fetch(
+		'https://api.github.com/repos/PraveshKunwar/Ultimatum/commits/master'
+	)
+		.then((resp) => resp.json())
+		.then((data: GithubTypes) => res.send(data));
 });
-router.get('/github', (req: Request, res: Response) => {});
 
 module.exports = router;

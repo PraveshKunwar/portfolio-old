@@ -13,7 +13,7 @@ import {
 	Bss,
 } from '../assets/svg/SVG_Icons';
 import Hr from '../styled-components/Hr';
-import { colors } from '@material-ui/core';
+import Github from './Github';
 const Personal: React.FC = () => {
 	return (
 		<div className="?work">
@@ -210,8 +210,16 @@ const Personal: React.FC = () => {
 						MongoDB.
 					</p>
 				</div>
-				<Hr init_color={Colors.slate} hover_color={Colors.pinkish_purp} />
 			</Box>
+			<AboutMeHeader
+				color={Colors.dark_slate_border_purple}
+				size="30px"
+				top="2rem"
+				weight={700}
+			>
+				Github: Latest Commits
+			</AboutMeHeader>
+			<Github />
 		</div>
 	);
 };
