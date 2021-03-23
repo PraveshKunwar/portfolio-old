@@ -3,7 +3,7 @@ import { LandingHeader } from '../styled-components/Header';
 import Color from '../utils/Colors';
 import Profile from '../styled-components/Profile';
 //@ts-ignore
-import image from '../assets/images/profile.jpg';
+import image from '../public/assets/images/profile.jpg';
 const Header: React.FC = () => {
 	return (
 		<div className="#header">
