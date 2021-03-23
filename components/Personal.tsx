@@ -11,7 +11,7 @@ import {
 	Mongo,
 	Node,
 	Bss,
-} from '../public/assets/svg/SVG_Icons';
+} from '../static/svg/SVG_Icons';
 import Hr from '../styled-components/Hr';
 import Github from './Github';
 const Personal: React.FC = () => {
