@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from '../../client/src/pages/Home';
-import AboutMe from '../../client/src/pages/AboutMe';
-import Contact from '../../client/src/pages/Contact';
+import Home from '../pages/Home';
+import AboutMe from '../pages/AboutMe';
+import Contact from '../pages/Contact';
 import Resume from '../components/Resume';
 
 const Routes = () => {
