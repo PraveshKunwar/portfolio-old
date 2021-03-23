@@ -9,6 +9,7 @@ import { ShowMore } from '../styled-components/Button';
 import Hr from '../styled-components/Hr';
 import Colors from '../utils/Colors';
 import { Box } from '../styled-components/Box';
+import Link from 'next/link';
 
 const Home: React.FC = () => {
 	return (
@@ -19,7 +20,9 @@ const Home: React.FC = () => {
 			<AboutHeader />
 			<AboutParagraph />
 			<ShowMore color="#FFFFFF" radius="10px">
-				<a href="/about_me">Learn More</a>
+				<Link href="/about_me/AboutMe.tsx">
+					<a>Learn More</a>
+				</Link>
 			</ShowMore>
 			<Box
 				width="600px"
