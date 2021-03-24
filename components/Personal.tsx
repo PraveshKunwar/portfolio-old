@@ -219,7 +219,6 @@ const Personal: React.FC = () => {
 			>
 				Github: Latest Commits
 			</AboutMeHeader>
-			<Github />
 		</div>
 	);
 };

@@ -8,7 +8,7 @@ import Image from 'next/image';
 const Header: React.FC = () => {
 	return (
 		<div className="#header">
-			<Profile src={require('/profile.jpg')} />
+			<Profile src={'/profile.jpg'} />
 			<LandingHeader h1_color={Color.slate} b_color={Color.pink_main}>
 				Hi, my name is Pravesh Kunwar. <br></br>
 				<b>I create things with code.</b>
