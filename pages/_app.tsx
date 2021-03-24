@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
 
-import { Html, Head } from 'next/document';
 import AboutHeader from '../components/AboutHeader';
 import AboutParagraph from '../components/AboutParagraph';
 import Header from '../components/Header';
@@ -14,7 +13,7 @@ import Colors from '../utils/Colors';
 import { Box } from '../styled-components/Box';
 import Link from 'next/link';
 
-const App = () => {
+export default function App() {
 	const [loading, setLoading] = useState(false);
 	useEffect(() => {
 		setLoading(true);
@@ -34,11 +33,10 @@ const App = () => {
 					<ScrollToProjects />
 					<AboutHeader />
 					<AboutParagraph />
-					<ShowMore color="#FFFFFF" radius="10px">
-						<Link href="/about">
-							<a>Learn More</a>
-						</Link>
-					</ShowMore>
+					<ShowMore color="#FFFFFF" radius="10px"></ShowMore>
+					<Link href="/about">
+						<a>Learn More</a>
+					</Link>
 					<Box
 						width="600px"
 						height="325px"
@@ -54,6 +52,4 @@ const App = () => {
 			)}
 		</div>
 	);
-};
-
-export default App;
+}
