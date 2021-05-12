@@ -11,12 +11,18 @@ import {
 	Mongo,
 	Node,
 	Bss,
+	Rust,
 } from '../assets/svg/SVG_Icons';
 import Hr from '../styled-components/Hr';
 import Github from './Github';
 const Personal: React.FC = () => {
 	return (
 		<div className="?work">
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
 			<AboutMeHeader
 				color={Colors.dark_slate_border_purple}
 				size="30px"
@@ -31,7 +37,6 @@ const Personal: React.FC = () => {
 				background={Colors.lighter_navy}
 				color={Colors.dark_slate_border_purple}
 				size="16px"
-				radius="0px"
 			>
 				<div className="?work_box_1">
 					<p style={{ marginTop: '1rem' }}>
@@ -55,6 +60,17 @@ const Personal: React.FC = () => {
 						(Not started yet, but coming soon!)
 					</p>
 				</div>
+				<div className="?work_box_3">
+					<p style={{ marginTop: '1rem' }}>
+						<b style={{ color: Colors.pink_main }}>▹ </b> The Worlds Front Page
+					</p>
+					<p>
+						A website that is in the works. Offers real time updates on latest
+						global politics news, stock market, forex, and much more, including
+						a future website currency system where users can cash out prizes on
+						the website.
+					</p>
+				</div>
 				<div className="?work_ec's">
 					<p style={{ marginTop: '1rem' }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b> Extracirriculars
@@ -74,12 +90,11 @@ const Personal: React.FC = () => {
 				Programming Languages
 			</AboutMeHeader>
 			<Box
-				width="400px"
-				height="350px"
+				width="200px"
+				height="200px"
 				background={Colors.lighter_navy}
 				color={Colors.dark_slate_border_purple}
 				size="16px"
-				radius="10px"
 			>
 				<div className="?lang_html">
 					<Html />
@@ -89,11 +104,6 @@ const Personal: React.FC = () => {
 					<p>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 100%
-					</p>
-					<p>
-						<b style={{ color: Colors.pink_main }}>▹ </b>
-						<b>Info: </b>I am quite comfortable with HTML, first language I ever
-						learned as a programmer!
 					</p>
 				</div>
 				<div className="?lang_css">
@@ -105,14 +115,6 @@ const Personal: React.FC = () => {
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 80%
 					</p>
-					<p>
-						<b style={{ color: Colors.pink_main }}>▹ </b>
-						<b>Info: </b>CSS, a language I am experienced in as well, with a
-						slight love hate relationship.<br></br>
-						<br></br>
-						<b style={{ color: Colors.pink_main }}>▹ </b>External - Framer
-						Motion, Chakra UI, Bulma.
-					</p>
 				</div>
 				<div className="?lang_js">
 					<Js />
@@ -122,11 +124,6 @@ const Personal: React.FC = () => {
 					<p>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 85%
-					</p>
-					<p>
-						<b style={{ color: Colors.pink_main }}>▹ </b>
-						<b>Info: </b>JavaScript, my favorite language! I love this language
-						a lot and use it everyday, a language I am heavily experienced in.
 					</p>
 				</div>
 				<div className="?lang_ts">
@@ -138,12 +135,6 @@ const Personal: React.FC = () => {
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 55%
 					</p>
-					<p>
-						<b style={{ color: Colors.pink_main }}>▹ </b>
-						<b>Info: </b>TypeScript, a language that has grown on me, and has
-						quickly been one of my favorites. Still learning, but an amazing
-						language!
-					</p>
 				</div>
 				<div className="?lang_react">
 					<ReactJS />
@@ -153,15 +144,6 @@ const Personal: React.FC = () => {
 					<p>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 75%
-					</p>
-					<p>
-						<b style={{ color: Colors.pink_main }}>▹ </b>
-						<b>Info: </b>React, an amazing JavaScript framework that makes web
-						dev a lot easier! I am quite experienced in this sweet framework.{' '}
-						<br></br>
-						<br></br>
-						<b style={{ color: Colors.pink_main }}>▹ </b>External - Redux,
-						GraphQL, Next.JS
 					</p>
 				</div>
 				<div className="?lang_node">
@@ -173,11 +155,6 @@ const Personal: React.FC = () => {
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 80%
 					</p>
-					<p>
-						<b style={{ color: Colors.pink_main }}>▹ </b>
-						<b>Info: </b>Node.JS, my main backend language that I use. Quite
-						familiar with frameworks such as Express.JS as well.
-					</p>
 				</div>
 				<div className="?lang_bss">
 					<Bss />
@@ -187,11 +164,6 @@ const Personal: React.FC = () => {
 					<p>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 45%
-					</p>
-					<p>
-						<b style={{ color: Colors.pink_main }}>▹ </b>
-						<b>Info: </b>Bootstrap, a cool JS framework. I use this often, but
-						still learning, and not quite too experienced.
 					</p>
 				</div>
 				<div className="?lang_mongo">
@@ -203,11 +175,15 @@ const Personal: React.FC = () => {
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 65%
 					</p>
+				</div>
+				<div className="?lang_rust">
+					<Rust />
+					<p>
+						<b style={{ color: Colors.blue_main }}>Rust</b>
+					</p>
 					<p>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
-						<b>Info: </b>MongoDB, my only database that I use. I am quite
-						experienced in making models, schemas, collections, etc, with
-						MongoDB.
+						<b>Experience</b> - 35%
 					</p>
 				</div>
 			</Box>
@@ -219,6 +195,7 @@ const Personal: React.FC = () => {
 			>
 				Github: Latest Commits
 			</AboutMeHeader>
+			<Github />
 		</div>
 	);
 };

@@ -13,6 +13,7 @@ export const Box = styled.div`
 	align-items: center;
 	flex-direction: row;
 	flex-wrap: wrap;
+	transition: transform 0.3s ease-in-out;
 	> div {
 		margin: 25px;
 		margin-bottom: ${(props: BoxTypes) =>
@@ -24,9 +25,12 @@ export const Box = styled.div`
 		font-size: ${(props: BoxTypes) => (props.size ? props.size : '16px')};
 		color: ${(props: BoxTypes) => (props.color ? props.color : false)};
 		border-radius: ${(props: BoxTypes) =>
-			props.radius ? props.radius : '10px'};
+			props.radius ? props.radius : '0px'};
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		text-align: center;
 		font-family: 'Inter', 'Roboto', 'Oswald', 'SF Mono';
+	}
+	> div:hover {
+		transform: scale(1.02);
 	}
 `;

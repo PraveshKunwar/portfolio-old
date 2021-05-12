@@ -21,7 +21,7 @@ const Loading: React.FC = () => {
 					variant="danger"
 				></Spinner>
 			</SpinnerCenter>
-			{final ? <Welcome>...</Welcome> : false}
+			{final ? <Welcome>Loading...</Welcome> : false}
 		</div>
 	);
 };

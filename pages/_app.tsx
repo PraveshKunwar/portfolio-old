@@ -1,55 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import Loading from '../components/Loading';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
 
-import AboutHeader from '../components/AboutHeader';
-import AboutParagraph from '../components/AboutParagraph';
-import Header from '../components/Header';
-import ScrollToProjects from '../components/ScrollToProjects';
-import Projects from '../components/Projects';
-import Sticky from '../components/Sticky';
-import { ShowMore } from '../styled-components/Button';
-import Hr from '../styled-components/Hr';
-import Colors from '../utils/Colors';
-import { Box } from '../styled-components/Box';
-import Link from 'next/link';
-
-export default function App() {
-	const [loading, setLoading] = useState(false);
-	useEffect(() => {
-		setLoading(true);
-		setTimeout(() => {
-			setLoading(false);
-		}, 3000);
-		document.body.style.backgroundColor = '#0a192f';
-	}, []);
+const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 	return (
-		<div className="#personal-portfolio">
-			{loading ? (
-				<Loading />
-			) : (
-				<div className="#home">
-					<Sticky />
-					<Header />
-					<ScrollToProjects />
-					<AboutHeader />
-					<AboutParagraph />
-					<ShowMore color="#FFFFFF" radius="10px"></ShowMore>
-					<Link href="/about">
-						<a>Learn More</a>
-					</Link>
-					<Box
-						width="600px"
-						height="325px"
-						background={Colors.lighter_navy}
-						color={Colors.pink_main}
-						size="16px"
-						radius="0px"
-					>
-						<Hr init_color={Colors.slate} hover_color={Colors.pinkish_purp} />
-					</Box>
-					<Projects />
-				</div>
-			)}
-		</div>
+		<>
+			<Head>
+				<meta charSet="utf-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta
+					name="description"
+					content="Personal portfolio for Pravesh Kunwar."
+				/>
+				<meta name="keywords" content="PraveshK, Pravesh Kunwar" />
+				<meta name="author" content="Pravesh Kunwar" />
+			</Head>
+			<Component {...pageProps} />
+		</>
 	);
-}
+};
+export default App;

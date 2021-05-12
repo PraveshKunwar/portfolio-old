@@ -2,8 +2,6 @@ import React from 'react';
 import { LandingHeader } from '../styled-components/Header';
 import Color from '../utils/Colors';
 import Profile from '../styled-components/Profile';
-import Image from 'next/image';
-//@ts-ignore\
 
 const Header: React.FC = () => {
 	return (

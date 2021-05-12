@@ -23,14 +23,9 @@ const Github: React.FC = () => {
 				color={Colors.dark_slate_border_purple}
 				size="16px"
 				radius="0px"
-			>
-				<div className="commit_stage_1">
-					<p style={{ marginTop: '1rem' }}>
-						<b style={{ color: Colors.pink_main }}>▹ </b>Ultimatum | Commits
-					</p>
-					<p></p>
-				</div>
-			</Box>
+			></Box>
+			<br></br>
+			<br></br>
 		</div>
 	);
 };
