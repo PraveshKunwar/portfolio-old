@@ -1,6 +1,8 @@
 import { Box } from '../styled-components/Box';
 import Colors from '../utils/Colors';
-export default function Custom404() {
+import { NextPage } from "next"
+
+const FourOhFour: NextPage = (): JSX.Element => {
 	return (
 		<Box
 			width="400px"
@@ -19,3 +21,5 @@ export default function Custom404() {
 		</Box>
 	);
 }
+
+export default FourOhFour;

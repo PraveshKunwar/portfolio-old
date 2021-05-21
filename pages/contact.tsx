@@ -1,6 +1,6 @@
 import React from 'react';
-
-const Contact: React.FC = () => {
+import { NextPage } from "next"
+const Contact: NextPage = (): JSX.Element => {
 	return <div>Hello contact.</div>;
 };
 

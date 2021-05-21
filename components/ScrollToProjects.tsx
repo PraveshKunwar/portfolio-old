@@ -4,12 +4,17 @@ import ScrollTo from '../styled-components/ScrollTo';
 import Link from '../styled-components/Link';
 import Colors from '../utils/Colors';
 import Hr from '../styled-components/Hr';
+import {useRouter} from "next/router";
+
 const ScrollToProjects: React.FC = () => {
+	const router = useRouter();
 	return (
 		<div>
 			<ScrollTo className="?scroll_to">
-				<Link data-scroll color={Colors.slate} href="#projects">
-					<ArrowDownwardIcon fontSize="large" />
+				<Link data-scroll color={Colors.slate} >
+					<ArrowDownwardIcon fontSize="large" onClick={() => {
+						router.push("/about")
+					}}/>
 					<br></br>
 					<p>Projects</p>
 				</Link>

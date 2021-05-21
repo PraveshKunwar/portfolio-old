@@ -13,8 +13,8 @@ export const Box = styled.div`
 	align-items: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	transition: transform 0.3s ease-in-out;
 	> div {
+		transition: transform 0.2s ease-in-out;
 		margin: 25px;
 		margin-bottom: ${(props: BoxTypes) =>
 			props.bottom ? props.bottom : false};

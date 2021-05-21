@@ -6,12 +6,12 @@ import Colors from '../utils/Colors';
 import { Box } from '../styled-components/Box';
 import moment from 'moment';
 const Github: React.FC = () => {
-	const [data, setData] = useState<GithubData>();
+	const [data, setData] = useState<GithubData | null>(null);
 	useEffect(() => {
 		fetch('/api/github')
 			.then((res: Response) => res.json())
-			.then((data: GithubData) => {
-				setData(data);
+			.then((returned: GithubData) => {
+				console.log(returned);
 			});
 	});
 	return (

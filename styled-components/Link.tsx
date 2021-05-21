@@ -5,6 +5,10 @@ const Link = styled.a`
 	font-family: 'Inter', 'Roboto', 'Oswald';
 	text-decoration: none;
 
+	&:hover {
+			color: ${(props: LinkTypes) => (props.color ? props.color : false)};
+	}
+
 	&:active {
 		color: ${(props: LinkTypes) => (props.color ? props.color : false)};
 	}

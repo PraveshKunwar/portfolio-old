@@ -15,7 +15,7 @@ import Link from 'next/link';
 import { NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
 
-export const Index: NextPage = () => {
+export const Index: NextPage = (): JSX.Element => {
 	const [loading, setLoading] = useState(false);
 	const router = useRouter();
 	useEffect(() => {
