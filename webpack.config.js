@@ -1,4 +1,7 @@
 module.exports = {
+	node: {
+		fs: 'empty',
+	},
 	module: {
 		rules: [
 			{
@@ -6,6 +9,9 @@ module.exports = {
 				use: [
 					{
 						loader: 'file-loader',
+					},
+					{
+						loader: '@mdx-js/loader',
 					},
 				],
 			},

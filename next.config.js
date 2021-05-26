@@ -1,10 +1,16 @@
 const withFonts = require('next-fonts');
 const withImages = require('next-images');
 const webpack = require('webpack');
+const withMDX = require('@next/mdx')({
+	extension: /\.mdx?$/,
+});
 module.exports = withImages({
 	webpack(config, options) {
 		return config;
 	},
+});
+module.exports = withMDX({
+	pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 });
 module.exports = withFonts({
 	webpack(config, options) {

@@ -17,6 +17,6 @@
 		"jsx": "preserve",
 		"types": ["node"]
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/blog.mdx"],
 	"exclude": ["node_modules"]
 }
