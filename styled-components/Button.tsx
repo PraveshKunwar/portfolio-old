@@ -5,6 +5,7 @@ export const ShowMore = styled.button`
 	border-radius: ${(props: ButtonTypes) =>
 		props.radius ? props.radius : '0px'};
 	text-align: center;
+	color: ${(props: ButtonTypes) => (props.color ? props.color : false)};
 	border-width: 0px;
 	display: block;
 	margin-left: auto;

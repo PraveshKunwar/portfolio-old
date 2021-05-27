@@ -24,7 +24,7 @@ const Personal: React.FC = () => {
 			<br></br>
 			<br></br>
 			<AboutMeHeader
-				color={Colors.dark_slate_border_purple}
+				color={Colors.darker_slate}
 				size="30px"
 				top="2rem"
 				weight={700}
@@ -35,7 +35,7 @@ const Personal: React.FC = () => {
 				width="400px"
 				height="250px"
 				background={Colors.lighter_navy}
-				color={Colors.dark_slate_border_purple}
+				color={Colors.darker_slate}
 				size="16px"
 			>
 				<div className="?work_box_1">
@@ -82,7 +82,7 @@ const Personal: React.FC = () => {
 				</div>
 			</Box>
 			<AboutMeHeader
-				color={Colors.dark_slate_border_purple}
+				color={Colors.darker_slate}
 				size="30px"
 				top="2rem"
 				weight={700}
@@ -93,7 +93,7 @@ const Personal: React.FC = () => {
 				width="200px"
 				height="200px"
 				background={Colors.lighter_navy}
-				color={Colors.dark_slate_border_purple}
+				color={Colors.darker_slate}
 				size="16px"
 			>
 				<div className="?lang_html">
@@ -187,15 +187,6 @@ const Personal: React.FC = () => {
 					</p>
 				</div>
 			</Box>
-			<AboutMeHeader
-				color={Colors.dark_slate_border_purple}
-				size="30px"
-				top="2rem"
-				weight={700}
-			>
-				Github: Latest Commits
-			</AboutMeHeader>
-			<Github />
 		</div>
 	);
 };

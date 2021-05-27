@@ -16,6 +16,7 @@ import { Box } from '../styled-components/Box';
 import Link from 'next/link';
 import { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
+import ScrollToDashboard from '../components/ScrollToDashboard';
 
 interface IndexProps {
 	posts: {
@@ -44,11 +45,12 @@ export const Index: NextPage<IndexProps> = ({
 				<div className="#home">
 					<Sticky />
 					<Header />
+					<ScrollToDashboard />
 					<ScrollToProjects />
 					<AboutHeader />
 					<AboutParagraph />
 					<ShowMore
-						color={Colors.dark_slate_border_purple}
+						color={Colors.slate}
 						radius="10px"
 						onClick={() => {
 							router.push('/about');

@@ -11,7 +11,7 @@ const Colors = {
 	peach: '#ffcba4',
 	slate: '#ccd6f6',
 	gold: '#FFD700',
-	dark_slate_border_purple: '#7e8dbd',
+	darker_slate: '#7e8dbd',
 };
 
 export default Colors;
