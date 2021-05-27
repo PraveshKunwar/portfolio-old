@@ -15,7 +15,7 @@ const AboutParagraph: React.FC = () => {
 			>
 				<div className="?about_me_box">
 					<AboutMeParagraph
-						color={Colors.dark_slate_border_purple}
+						color={Colors.darker_slate}
 						style={{ marginTop: '4rem' }}
 					>
 						<b style={{ color: Colors.pink_main }}>▹</b>Welcome to my personal
@@ -31,7 +31,7 @@ const AboutParagraph: React.FC = () => {
 				</div>
 				<div className="?about_me_box_2">
 					<AboutMeParagraph
-						color={Colors.dark_slate_border_purple}
+						color={Colors.darker_slate}
 						style={{ marginTop: '4rem' }}
 					>
 						<b style={{ color: Colors.pink_main }}>▹ More Info: </b>
