@@ -5,7 +5,7 @@ const AboutHeader: React.FC = () => {
 	return (
 		<div className="#aboutme_header">
 			<AboutMeHeader
-				color={Colors.dark_slate_border_purple}
+				color={Colors.darker_slate}
 				size="30px"
 				top="2rem"
 				weight={700}
