@@ -14,6 +14,11 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 				<meta name="keywords" content="PraveshK, Pravesh Kunwar" />
 				<meta name="author" content="Pravesh Kunwar" />
 			</Head>
+			<style jsx global>{`
+				body {
+					background-color: #0a192f;
+				}
+			`}</style>
 			<Component {...pageProps} />
 		</>
 	);

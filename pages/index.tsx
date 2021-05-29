@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
-import { promises as fs } from 'fs';
 import path from 'path';
 import grayMatter from 'gray-matter';
 import AboutHeader from '../components/AboutHeader';
 import AboutParagraph from '../components/AboutParagraph';
 import Header from '../components/Header';
-import ScrollToProjects from '../components/ScrollToProjects';
+import ScrollToProjects from '../components/ScrollTo';
 import Projects from '../components/Projects';
 import Sticky from '../components/Sticky';
 import { ShowMore } from '../styled-components/Button';
@@ -16,7 +15,7 @@ import { Box } from '../styled-components/Box';
 import Link from 'next/link';
 import { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
-import ScrollToDashboard from '../components/ScrollToDashboard';
+import { accessToken } from '../lib/spotify';
 
 interface IndexProps {
 	posts: {
@@ -45,7 +44,6 @@ export const Index: NextPage<IndexProps> = ({
 				<div className="#home">
 					<Sticky />
 					<Header />
-					<ScrollToDashboard />
 					<ScrollToProjects />
 					<AboutHeader />
 					<AboutParagraph />
@@ -71,26 +69,26 @@ export const Index: NextPage<IndexProps> = ({
 					</Box>
 					<Projects />
 					<div className="post-links">
-						{posts.map((post) => {
+						{/*posts.map((post) => {
 							const { title, path } = post;
 							return (
 								<Link key={path} href={path}>
 									<a className={`post-${title}`}>{title}</a>
 								</Link>
 							);
-						})}
+						})*/}
 					</div>
 				</div>
 			)}
 		</div>
 	);
 };
-
+/*
 export const getStaticProps: GetStaticProps = async () => {
 	const dir = path.join(process.cwd(), 'pages/posts');
 	const fileNames = await fs.readdir(dir);
 	const files = await Promise.all(
-		fileNames.map(async (fileName) => {
+		fileNames.map(async (fileName: string) => {
 			const fPath = path.join(dir, fileName);
 			const content = await fs.readFile(fPath, 'utf-8');
 			const matter = grayMatter(content);
@@ -100,7 +98,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			};
 		})
 	);
-	const posts = files.map((f) => {
+	const posts = files.map((f: any) => {
 		return {
 			path: `/posts/${f.fileName.replace('mdx', '')}`,
 			title: f.matter.data.title,
@@ -112,5 +110,6 @@ export const getStaticProps: GetStaticProps = async () => {
 		},
 	};
 };
+*/
 
 export default Index;

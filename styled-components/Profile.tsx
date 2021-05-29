@@ -22,7 +22,6 @@ const Profile = styled.img`
 			opacity: 1;
 		}
 	}
-
 	@-moz-keyframes fadeIn {
 		0% {
 			opacity: 0;

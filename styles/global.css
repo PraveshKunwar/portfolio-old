@@ -2,3 +2,7 @@
 	font-family: 'SFMono_Regular';
 	src: url('../assets/fonts/SFMono_Regular.otf');
 }
+
+* {
+	background: #0a192f;
+}
