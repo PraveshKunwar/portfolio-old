@@ -27,7 +27,7 @@ interface IndexProps {
 export const Index: NextPage<IndexProps> = ({
 	posts,
 }: IndexProps): JSX.Element => {
-	const [loading, setLoading] = useState(false);
+	const [loading, setLoading] = useState<boolean>(false);
 	const router = useRouter();
 	useEffect(() => {
 		setLoading(true);
