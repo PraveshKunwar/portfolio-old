@@ -20,7 +20,7 @@ const Github: React.FC = () => {
 				width="400px"
 				height="250px"
 				background={Colors.lighter_navy}
-				color={Colors.dark_slate_border_purple}
+				color={Colors.darker_slate}
 				size="16px"
 				radius="0px"
 			></Box>

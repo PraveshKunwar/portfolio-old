@@ -19,7 +19,7 @@ const Loading: React.FC = () => {
 					role="status"
 					id="spinner"
 					variant="danger"
-				></Spinner>
+				/>
 			</SpinnerCenter>
 			{final ? <Welcome>Loading...</Welcome> : false}
 		</div>
