@@ -46,3 +46,17 @@ export const recentlyPlayed = async (
 	);
 	return res;
 };
+
+export const currentlyPlaying = async (
+	token: string
+): Promise<AxiosResponse<any>> => {
+	const res = await axios.get(
+		'https://api.spotify.com/v1/me/player/currently-playing',
+		{
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
+		}
+	);
+	return res;
+};

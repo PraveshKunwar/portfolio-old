@@ -1,11 +1,17 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { accessToken, recentlyPlayed } from '../../lib/spotify';
+import {
+	accessToken,
+	currentlyPlaying,
+	recentlyPlayed,
+} from '../../lib/spotify';
 import nookies from 'nookies';
 
 export default async function (req: NextApiRequest, res: NextApiResponse) {
 	const response = await accessToken();
-	const data = await recentlyPlayed(response.access_token);
-	res.json({
-		RECENTLY_PLAYED: data.data,
+	const recent = await recentlyPlayed(response.access_token);
+	const current = await currentlyPlaying(response.access_token);
+	return res.json({
+		RECENTLY_PLAYED: recent.data,
+		CURRENTLY_PLAYING: current.data,
 	});
 }
