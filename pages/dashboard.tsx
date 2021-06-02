@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import { GetServerSideProps, NextPage } from 'next';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { server } from '../checks';
 import { recentlyPlayed, TokenData } from '../lib/spotify';
 
@@ -12,7 +12,13 @@ interface PropTypes {
 }
 
 const Dashboard: NextPage<PropTypes> = ({ data }: PropTypes): JSX.Element => {
-	return <div className="dashboard">{data.CURRENTLY_PLAYING.item.name}</div>;
+	return (
+		<div className="dashboard">
+			{data.CURRENTLY_PLAYING.item
+				? data.CURRENTLY_PLAYING.item.name
+				: 'Currently not playing anything!'}
+		</div>
+	);
 };
 
 Dashboard.getInitialProps = async ({ req }) => {

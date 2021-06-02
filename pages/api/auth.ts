@@ -4,7 +4,6 @@ import {
 	currentlyPlaying,
 	recentlyPlayed,
 } from '../../lib/spotify';
-import nookies from 'nookies';
 
 export default async function (req: NextApiRequest, res: NextApiResponse) {
 	const response = await accessToken();

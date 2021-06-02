@@ -3,4 +3,5 @@ export interface ButtonTypes {
 	size?: string;
 	background?: string;
 	color?: string;
+	gradient?: string;
 }
