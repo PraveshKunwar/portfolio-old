@@ -92,16 +92,17 @@ const Personal: React.FC = () => {
 			<Box
 				width="200px"
 				height="200px"
-				background={Colors.lighter_navy}
+				background={Colors.blue_main}
 				color={Colors.darker_slate}
 				size="16px"
+				radius="50%"
 			>
 				<div className="?lang_html">
 					<Html />
 					<p>
-						<b style={{ color: Colors.blue_main }}>HTML</b>
+						<b style={{ color: Colors.gold }}>HTML</b>
 					</p>
-					<p>
+					<p style={{ color: Colors.slate }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 100%
 					</p>
@@ -109,9 +110,9 @@ const Personal: React.FC = () => {
 				<div className="?lang_css">
 					<Css />
 					<p>
-						<b style={{ color: Colors.blue_main }}>CSS</b>
+						<b style={{ color: Colors.gold }}>CSS</b>
 					</p>
-					<p>
+					<p style={{ color: Colors.slate }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 80%
 					</p>
@@ -119,9 +120,9 @@ const Personal: React.FC = () => {
 				<div className="?lang_js">
 					<Js />
 					<p>
-						<b style={{ color: Colors.blue_main }}>JavaScript</b>
+						<b style={{ color: Colors.gold }}>JavaScript</b>
 					</p>
-					<p>
+					<p style={{ color: Colors.slate }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 85%
 					</p>
@@ -129,9 +130,9 @@ const Personal: React.FC = () => {
 				<div className="?lang_ts">
 					<Ts />
 					<p>
-						<b style={{ color: Colors.blue_main }}>TypeScript</b>
+						<b style={{ color: Colors.gold }}>TypeScript</b>
 					</p>
-					<p>
+					<p style={{ color: Colors.slate }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 55%
 					</p>
@@ -139,9 +140,9 @@ const Personal: React.FC = () => {
 				<div className="?lang_react">
 					<ReactJS />
 					<p>
-						<b style={{ color: Colors.blue_main }}>React.JS</b>
+						<b style={{ color: Colors.gold }}>React.JS</b>
 					</p>
-					<p>
+					<p style={{ color: Colors.slate }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 75%
 					</p>
@@ -149,9 +150,9 @@ const Personal: React.FC = () => {
 				<div className="?lang_node">
 					<Node />
 					<p>
-						<b style={{ color: Colors.blue_main }}>Node.JS</b>
+						<b style={{ color: Colors.gold }}>Node.JS</b>
 					</p>
-					<p>
+					<p style={{ color: Colors.slate }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 80%
 					</p>
@@ -159,9 +160,9 @@ const Personal: React.FC = () => {
 				<div className="?lang_bss">
 					<Bss />
 					<p>
-						<b style={{ color: Colors.blue_main }}>Bootstrap</b>
+						<b style={{ color: Colors.gold }}>Bootstrap</b>
 					</p>
-					<p>
+					<p style={{ color: Colors.slate }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 45%
 					</p>
@@ -169,9 +170,9 @@ const Personal: React.FC = () => {
 				<div className="?lang_mongo">
 					<Mongo />
 					<p>
-						<b style={{ color: Colors.blue_main }}>MongoDB</b>
+						<b style={{ color: Colors.gold }}>MongoDB</b>
 					</p>
-					<p>
+					<p style={{ color: Colors.slate }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 65%
 					</p>
@@ -179,9 +180,9 @@ const Personal: React.FC = () => {
 				<div className="?lang_rust">
 					<Rust />
 					<p>
-						<b style={{ color: Colors.blue_main }}>Rust</b>
+						<b style={{ color: Colors.gold }}>Rust</b>
 					</p>
-					<p>
+					<p style={{ color: Colors.slate }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 35%
 					</p>
