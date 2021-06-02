@@ -18,3 +18,7 @@ FIX (Bugs)
 - Messy code.
 - Color naming.
 - Theming (would require rework.)
+
+404 Page
+
+- Add good styling, and redirect menu.
