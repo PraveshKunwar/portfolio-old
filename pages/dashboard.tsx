@@ -7,6 +7,8 @@ import { List } from '../styled-components/List';
 import Link from '../styled-components/Link';
 import Profile from '../styled-components/Profile';
 import Image from 'next/image';
+import Loading from '../components/Loading';
+import { useEffect, useState } from 'react';
 
 interface AlbumType {
 	album_type: string;
@@ -59,61 +61,87 @@ interface PropTypes {
 }
 
 const Dashboard: NextPage<PropTypes> = ({ data }: PropTypes): JSX.Element => {
-	console.log(data.CURRENTLY_PLAYING.item);
+	const [loading, setLoading] = useState<boolean>(false);
+	useEffect(() => {
+		setLoading(true);
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
+	}, []);
 	return (
 		<div className="dashboard" style={{ color: Colors.darker_slate }}>
-			<Header
-				h1_color={Colors.darker_slate}
-				b_color={Colors.pink_main}
-				style={{ marginTop: '3rem' }}
-			>
-				<b>🚀 </b>
-				PraveshK's Dashboard
-				<br></br>
-				<br></br>
-			</Header>
-
-			{data.CURRENTLY_PLAYING.item ? (
-				<div className="currently-playing">
-					<img
-						src={
-							data.CURRENTLY_PLAYING.item.album.images[
-								data.CURRENTLY_PLAYING.item.album.images.length > 0 ? 1 : 0
-							].url
-						}
-						alt="Currently playing image."
-						width={256}
-						height={256}
-					/>
-					<Para color={Colors.darker_slate} style={{ marginTop: '4rem' }}>
-						<Link
-							href={data.CURRENTLY_PLAYING.item.external_urls.spotify}
-							color={Colors.darker_slate}
-							rel="noreferrer"
-							target="_blank"
-						>
-							{' '}
-							Currently playing: {data.CURRENTLY_PLAYING.item.name}
-						</Link>
-					</Para>
-				</div>
+			{loading ? (
+				<Loading />
 			) : (
-				'Currently not playing anything!'
+				<div className="content">
+					<Header
+						h1_color={Colors.darker_slate}
+						b_color={Colors.pink_main}
+						style={{ marginTop: '3rem' }}
+					>
+						<b>🚀 </b>
+						PraveshK's Dashboard
+						<br></br>
+						<br></br>
+					</Header>
+
+					{
+						<div className="currently-playing">
+							{data.CURRENTLY_PLAYING.item ? (
+								<div>
+									{' '}
+									<img
+										src={
+											data.CURRENTLY_PLAYING.item.album.images[
+												data.CURRENTLY_PLAYING.item.album.images.length > 0
+													? 1
+													: 0
+											].url
+										}
+										alt="Currently playing image."
+										width={256}
+										height={256}
+									/>
+									<Para
+										color={Colors.darker_slate}
+										style={{ marginTop: '4rem' }}
+									>
+										<Link
+											href={data.CURRENTLY_PLAYING.item.external_urls.spotify}
+											color={Colors.darker_slate}
+											rel="noreferrer"
+											target="_blank"
+										>
+											Currently playing: ${data.CURRENTLY_PLAYING.item.name}
+										</Link>
+									</Para>
+								</div>
+							) : (
+								<Para color={Colors.darker_slate} style={{ marginTop: '4rem' }}>
+									Currently not playing anything.
+								</Para>
+							)}
+						</div>
+					}
+					<List color={Colors.darker_slate}>
+						{data.RECENTLY_PLAYED.items.slice(0, 10).map((item, i) => {
+							return (
+								<li key={i}>
+									<Link
+										href={item.track.external_urls.spotify}
+										color={Colors.darker_slate}
+										rel="noreferrer"
+										target="_blank"
+									>
+										{`${i + 1} - ${item.track.name}`} ||{' '}
+										{item.track.artists[0].name}
+									</Link>
+								</li>
+							);
+						})}
+					</List>
+				</div>
 			)}
-			<List color={Colors.darker_slate}>
-				{data.RECENTLY_PLAYED.items.map((item, i) => {
-					return (
-						<li key={i}>
-							<Link
-								href={item.track.external_urls.spotify}
-								color={Colors.pink_main}
-								rel="noreferrer"
-								target="_blank"
-							>{`${i} - ${item.track.name}`}</Link>
-						</li>
-					);
-				})}
-			</List>
 		</div>
 	);
 };

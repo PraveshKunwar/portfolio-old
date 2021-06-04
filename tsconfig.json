@@ -15,7 +15,8 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"jsx": "preserve",
-		"types": ["node"]
+		"types": ["node"],
+		"downlevelIteration": true
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/blog.mdx"],
 	"exclude": ["node_modules"]
