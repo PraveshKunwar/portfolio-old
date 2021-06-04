@@ -8,7 +8,6 @@ const AboutMe: NextPage = (): JSX.Element => {
 		<div id="?about-me">
 			<Sticky />
 			<Personal />
-			<div className="#projects">YOOTY</div>
 		</div>
 	);
 };

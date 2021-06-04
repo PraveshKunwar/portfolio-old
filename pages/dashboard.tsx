@@ -1,9 +1,12 @@
-import axios, { AxiosResponse } from 'axios';
-import { GetServerSideProps, NextPage } from 'next';
-import { useEffect, useState } from 'react';
+import { NextPage } from 'next';
 import { server } from '../checks';
-import { recentlyPlayed, TokenData } from '../lib/spotify';
+import { LandingHeader as Header } from '../styled-components/Header';
+import { AboutMeParagraph as Para } from '../styled-components/Paragraph';
 import Colors from '../utils/Colors';
+import { List } from '../styled-components/List';
+import Link from '../styled-components/Link';
+import Profile from '../styled-components/Profile';
+import Image from 'next/image';
 
 interface AlbumType {
 	album_type: string;
@@ -56,22 +59,61 @@ interface PropTypes {
 }
 
 const Dashboard: NextPage<PropTypes> = ({ data }: PropTypes): JSX.Element => {
-	console.log(data.RECENTLY_PLAYED.items);
+	console.log(data.CURRENTLY_PLAYING.item);
 	return (
 		<div className="dashboard" style={{ color: Colors.darker_slate }}>
-			{data.CURRENTLY_PLAYING.item
-				? data.CURRENTLY_PLAYING.item.name
-				: 'Currently not playing anything!'}
+			<Header
+				h1_color={Colors.darker_slate}
+				b_color={Colors.pink_main}
+				style={{ marginTop: '3rem' }}
+			>
+				<b>🚀 </b>
+				PraveshK's Dashboard
+				<br></br>
+				<br></br>
+			</Header>
 
-			{data.RECENTLY_PLAYED.items.map((item, i) => {
-				return (
-					<ul>
+			{data.CURRENTLY_PLAYING.item ? (
+				<div className="currently-playing">
+					<img
+						src={
+							data.CURRENTLY_PLAYING.item.album.images[
+								data.CURRENTLY_PLAYING.item.album.images.length > 0 ? 1 : 0
+							].url
+						}
+						alt="Currently playing image."
+						width={256}
+						height={256}
+					/>
+					<Para color={Colors.darker_slate} style={{ marginTop: '4rem' }}>
+						<Link
+							href={data.CURRENTLY_PLAYING.item.external_urls.spotify}
+							color={Colors.darker_slate}
+							rel="noreferrer"
+							target="_blank"
+						>
+							{' '}
+							Currently playing: {data.CURRENTLY_PLAYING.item.name}
+						</Link>
+					</Para>
+				</div>
+			) : (
+				'Currently not playing anything!'
+			)}
+			<List color={Colors.darker_slate}>
+				{data.RECENTLY_PLAYED.items.map((item, i) => {
+					return (
 						<li key={i}>
-							{item.track.name} - {item.track.popularity}
+							<Link
+								href={item.track.external_urls.spotify}
+								color={Colors.pink_main}
+								rel="noreferrer"
+								target="_blank"
+							>{`${i} - ${item.track.name}`}</Link>
 						</li>
-					</ul>
-				);
-			})}
+					);
+				})}
+			</List>
 		</div>
 	);
 };

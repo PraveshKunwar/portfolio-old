@@ -10,6 +10,11 @@ module.exports = withImages({
 	},
 });
 module.exports = {
+	future: {
+		webpack: true,
+	},
+};
+module.exports = {
 	env: {
 		CLIENT_ID: process.env.CLIENT_ID,
 		CLIENT_SECRET: process.env.CLIENT_SECRET,

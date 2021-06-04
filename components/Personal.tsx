@@ -14,7 +14,6 @@ import {
 	Rust,
 } from '../assets/svg/SVG_Icons';
 import Hr from '../styled-components/Hr';
-import Github from './Github';
 const Personal: React.FC = () => {
 	return (
 		<div className="?work">
