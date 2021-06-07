@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import Welcome from '../styled-components/Welcome';
 import SpinnerCenter from '../styled-components/SpinnerCenter';
+import Colors from '../utils/Colors';
 
 const Loading: React.FC = () => {
 	const [final, setFinal] = useState(false);
@@ -21,7 +22,11 @@ const Loading: React.FC = () => {
 					variant="danger"
 				/>
 			</SpinnerCenter>
-			{final ? <Welcome>Loading...</Welcome> : false}
+			{final ? (
+				<Welcome color={Colors.darker_slate}>Loading...</Welcome>
+			) : (
+				false
+			)}
 		</div>
 	);
 };

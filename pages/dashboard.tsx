@@ -51,6 +51,12 @@ interface ItemType {
 	};
 }
 
+interface CommitElements {
+	commit: {
+		message: string;
+	};
+}
+
 interface PropTypes {
 	data: {
 		CURRENTLY_PLAYING: any;
@@ -58,9 +64,13 @@ interface PropTypes {
 			items: Array<ItemType>;
 		};
 	};
+	commits: Array<CommitElements>;
 }
 
-const Dashboard: NextPage<PropTypes> = ({ data }: PropTypes): JSX.Element => {
+const Dashboard: NextPage<PropTypes> = ({
+	data,
+	commits,
+}: PropTypes): JSX.Element => {
 	const [loading, setLoading] = useState<boolean>(false);
 	useEffect(() => {
 		setLoading(true);
@@ -77,52 +87,29 @@ const Dashboard: NextPage<PropTypes> = ({ data }: PropTypes): JSX.Element => {
 					<Header
 						h1_color={Colors.darker_slate}
 						b_color={Colors.pink_main}
-						style={{ marginTop: '3rem' }}
+						style={{ marginTop: '5rem' }}
 					>
 						<b>🚀 </b>
 						PraveshK's Dashboard
 						<br></br>
-						<br></br>
+						<b style={{ fontSize: '15px' }}>
+							This is my personal dashboard that contains my stats for things
+							such as Spotify, Github, and more!
+						</b>
 					</Header>
-
-					{
-						<div className="currently-playing">
-							{data.CURRENTLY_PLAYING.item ? (
-								<div>
-									{' '}
-									<img
-										src={
-											data.CURRENTLY_PLAYING.item.album.images[
-												data.CURRENTLY_PLAYING.item.album.images.length > 0
-													? 1
-													: 0
-											].url
-										}
-										alt="Currently playing image."
-										width={256}
-										height={256}
-									/>
-									<Para
-										color={Colors.darker_slate}
-										style={{ marginTop: '4rem' }}
-									>
-										<Link
-											href={data.CURRENTLY_PLAYING.item.external_urls.spotify}
-											color={Colors.darker_slate}
-											rel="noreferrer"
-											target="_blank"
-										>
-											Currently playing: ${data.CURRENTLY_PLAYING.item.name}
-										</Link>
-									</Para>
-								</div>
-							) : (
-								<Para color={Colors.darker_slate} style={{ marginTop: '4rem' }}>
-									Currently not playing anything.
-								</Para>
-							)}
-						</div>
-					}
+					<Header
+						h1_color={Colors.darker_slate}
+						b_color={Colors.pink_main}
+						style={{ marginTop: '3rem', fontSize: '25px' }}
+					>
+						<b>🌌 </b>
+						Top tracks
+						<br></br>
+						<br></br>
+						<b style={{ fontSize: '15px' }}>
+							My favorite tracks that I've been recently listening to:
+						</b>
+					</Header>
 					<List color={Colors.darker_slate}>
 						{data.RECENTLY_PLAYED.items.slice(0, 10).map((item, i) => {
 							return (
@@ -140,6 +127,75 @@ const Dashboard: NextPage<PropTypes> = ({ data }: PropTypes): JSX.Element => {
 							);
 						})}
 					</List>
+
+					{
+						<div className="currently-playing">
+							<Header
+								h1_color={Colors.darker_slate}
+								b_color={Colors.pink_main}
+								style={{ marginTop: '2rem', fontSize: '25px' }}
+							>
+								<b>🎶 </b>
+								Currently playing
+								<br></br>
+								<br></br>
+								<b style={{ fontSize: '15px' }}>
+									Music I am currently listening to:
+								</b>
+							</Header>
+							{data.CURRENTLY_PLAYING.item ? (
+								<div style={{ marginTop: '-7rem' }}>
+									<Profile>
+										<img
+											src={
+												data.CURRENTLY_PLAYING.item.album.images[
+													data.CURRENTLY_PLAYING.item.album.images.length > 0
+														? 1
+														: 0
+												].url
+											}
+											alt="Currently playing image."
+											width={256}
+											height={256}
+											style={{ borderRadius: '50%' }}
+										/>
+									</Profile>
+									<Para color={Colors.darker_slate}>
+										<Link
+											href={data.CURRENTLY_PLAYING.item.external_urls.spotify}
+											color={Colors.darker_slate}
+											rel="noreferrer"
+											target="_blank"
+										>
+											Currently playing: ${data.CURRENTLY_PLAYING.item.name}
+										</Link>
+									</Para>
+								</div>
+							) : (
+								<Para color={Colors.darker_slate} style={{ marginTop: '1rem' }}>
+									Currently not playing anything.
+								</Para>
+							)}
+						</div>
+					}
+					<div className="github-commits">
+						<Header
+							h1_color={Colors.darker_slate}
+							b_color={Colors.pink_main}
+							style={{ marginTop: '2rem', fontSize: '25px' }}
+						>
+							<b>🏆 </b>
+							Github commits
+							<br></br>
+							<br></br>
+							<b style={{ fontSize: '15px' }}>
+								Latest Github commits for top repositories:
+							</b>
+						</Header>
+						{commits.map((element, i) => {
+							return <p key={i}>{element.commit.message}</p>;
+						})}
+					</div>
 				</div>
 			)}
 		</div>
@@ -148,9 +204,12 @@ const Dashboard: NextPage<PropTypes> = ({ data }: PropTypes): JSX.Element => {
 
 Dashboard.getInitialProps = async ({ req }) => {
 	const res = await fetch(`${server}/api/auth`);
+	const github = await fetch(`${server}/api/github`);
 	const data = await res.json();
+	const commits = await github.json();
 	return {
 		data,
+		commits,
 	};
 };
 

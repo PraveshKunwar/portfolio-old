@@ -12,11 +12,11 @@ import DescriptionIcon from '@material-ui/icons/Description';
 
 const Sticky: React.FC = () => {
 	return (
-		<StickyLinks color={Colors.pink_main} className="?stick_links">
+		<StickyLinks color={Colors.darker_slate} className="?stick_links">
 			<div>
 				<Link
 					href={Socials.github}
-					color={Colors.pink_main}
+					color={Colors.darker_slate}
 					rel="noreferrer"
 					target="_blank"
 				>
@@ -26,7 +26,7 @@ const Sticky: React.FC = () => {
 			<div>
 				<Link
 					href={Socials.instagram}
-					color={Colors.pink_main}
+					color={Colors.darker_slate}
 					rel="noreferrer"
 					target="_blank"
 				>
@@ -36,7 +36,7 @@ const Sticky: React.FC = () => {
 			<div>
 				<Link
 					href={Socials.youtube}
-					color={Colors.pink_main}
+					color={Colors.darker_slate}
 					rel="noreferrer"
 					target="_blank"
 				>
@@ -46,7 +46,7 @@ const Sticky: React.FC = () => {
 			<div>
 				<Link
 					href={Socials.twitter}
-					color={Colors.pink_main}
+					color={Colors.darker_slate}
 					rel="noreferrer"
 					target="_blank"
 				>
