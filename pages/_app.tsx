@@ -16,7 +16,7 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 			</Head>
 			<style jsx global>{`
 				body {
-					background-color: #0a192f;
+					background-color: #141413;
 				}
 			`}</style>
 			<Component {...pageProps} />

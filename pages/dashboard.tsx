@@ -78,6 +78,7 @@ const Dashboard: NextPage<PropTypes> = ({
 			setLoading(false);
 		}, 2000);
 	}, []);
+
 	return (
 		<div className="dashboard" style={{ color: Colors.darker_slate }}>
 			{loading ? (
@@ -86,7 +87,7 @@ const Dashboard: NextPage<PropTypes> = ({
 				<div className="content">
 					<Header
 						h1_color={Colors.darker_slate}
-						b_color={Colors.pink_main}
+						b_color={Colors.gold}
 						style={{ marginTop: '5rem' }}
 					>
 						<b>🚀 </b>
@@ -157,7 +158,7 @@ const Dashboard: NextPage<PropTypes> = ({
 											alt="Currently playing image."
 											width={256}
 											height={256}
-											style={{ borderRadius: '50%' }}
+											style={{ borderRadius: '10%' }}
 										/>
 									</Profile>
 									<Para color={Colors.darker_slate}>
@@ -192,9 +193,11 @@ const Dashboard: NextPage<PropTypes> = ({
 								Latest Github commits for top repositories:
 							</b>
 						</Header>
-						{commits.map((element, i) => {
-							return <p key={i}>{element.commit.message}</p>;
-						})}
+						<List color={Colors.darker_slate}>
+							{commits.map((element, i) => {
+								return <li key={i}>{element.commit.message}</li>;
+							})}
+						</List>
 					</div>
 				</div>
 			)}

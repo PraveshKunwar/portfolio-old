@@ -8,7 +8,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 	const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 	const owner = 'PraveshKunwar',
 		repo = 'portfolio',
-		perPage = 5;
+		perPage = 3;
 
 	const commits = await octokit.request(`GET /repos/{owner}/{repo}/commits`, {
 		owner,

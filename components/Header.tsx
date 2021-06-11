@@ -8,12 +8,12 @@ const Header: React.FC = () => {
 	return (
 		<div className="#header">
 			<Profile>
-				<Image
+				<img
 					src="/profile.jpg"
 					alt="Picture of the author"
 					width={256}
 					height={256}
-					layout="responsive"
+					style={{ borderRadius: '50%' }}
 				/>
 			</Profile>
 			<LandingHeader h1_color={Color.slate} b_color={Color.pink_main}>

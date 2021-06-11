@@ -24,17 +24,27 @@ interface IndexProps {
 	}[];
 }
 
+interface WindowSize {
+	width: number;
+}
+
 export const Index: NextPage<IndexProps> = ({
 	posts,
 }: IndexProps): JSX.Element => {
 	const [loading, setLoading] = useState<boolean>(false);
+	const [widthHeight, setWidthHeight] = useState<WindowSize | null>(null);
 	const router = useRouter();
 	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			setWidthHeight({
+				width: window.innerWidth,
+			});
+		}
 		setLoading(true);
 		setTimeout(() => {
 			setLoading(false);
 		}, 3000);
-		document.body.style.backgroundColor = '#0a192f';
+		document.body.style.backgroundColor = '#000000';
 	}, []);
 	return (
 		<div className="#personal-portfolio">
@@ -42,7 +52,11 @@ export const Index: NextPage<IndexProps> = ({
 				<Loading />
 			) : (
 				<div className="#home">
-					<Sticky />
+					{
+						//Ignoring this, fix later maybe?
+						//@ts-ignore
+						widthHeight?.width < 768 ? false : <Sticky />
+					}
 					<Header />
 					<ScrollToProjects />
 					<AboutHeader />

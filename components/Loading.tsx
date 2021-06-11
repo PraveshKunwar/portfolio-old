@@ -15,12 +15,7 @@ const Loading: React.FC = () => {
 	return (
 		<div className="#loading...">
 			<SpinnerCenter>
-				<Spinner
-					animation="border"
-					role="status"
-					id="spinner"
-					variant="danger"
-				/>
+				<Spinner animation="border" role="status" id="spinner" variant="info" />
 			</SpinnerCenter>
 			{final ? (
 				<Welcome color={Colors.darker_slate}>Loading...</Welcome>
