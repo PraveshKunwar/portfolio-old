@@ -168,7 +168,7 @@ const Dashboard: NextPage<PropTypes> = ({
 											rel="noreferrer"
 											target="_blank"
 										>
-											Currently playing: ${data.CURRENTLY_PLAYING.item.name}
+											Currently playing: {data.CURRENTLY_PLAYING.item.name}
 										</Link>
 									</Para>
 								</div>
