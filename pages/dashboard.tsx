@@ -6,7 +6,6 @@ import Colors from '../utils/Colors';
 import { List } from '../styled-components/List';
 import Link from '../styled-components/Link';
 import Profile from '../styled-components/Profile';
-import Image from 'next/image';
 import Loading from '../components/Loading';
 import { useEffect, useState } from 'react';
 
@@ -168,7 +167,7 @@ const Dashboard: NextPage<PropTypes> = ({
 											rel="noreferrer"
 											target="_blank"
 										>
-											Currently playing: ${data.CURRENTLY_PLAYING.item.name}
+											Currently playing: {data.CURRENTLY_PLAYING.item.name}
 										</Link>
 									</Para>
 								</div>

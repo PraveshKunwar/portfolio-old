@@ -15,7 +15,7 @@ import { Box } from '../styled-components/Box';
 import Link from 'next/link';
 import { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
-import { accessToken } from '../lib/spotify';
+import fs from "fs/promises"
 
 interface IndexProps {
 	posts: {
@@ -83,21 +83,21 @@ export const Index: NextPage<IndexProps> = ({
 					</Box>
 					<Projects />
 					<div className="post-links">
-						{/*posts.map((post) => {
+						{posts.map((post) => {
 							const { title, path } = post;
 							return (
 								<Link key={path} href={path}>
 									<a className={`post-${title}`}>{title}</a>
 								</Link>
 							);
-						})*/}
+						})}
 					</div>
 				</div>
 			)}
 		</div>
 	);
 };
-/*
+
 export const getStaticProps: GetStaticProps = async () => {
 	const dir = path.join(process.cwd(), 'pages/posts');
 	const fileNames = await fs.readdir(dir);
@@ -114,7 +114,7 @@ export const getStaticProps: GetStaticProps = async () => {
 	);
 	const posts = files.map((f: any) => {
 		return {
-			path: `/posts/${f.fileName.replace('mdx', '')}`,
+			path: `/posts/${f.fileName.replace('.mdx', '')}`,
 			title: f.matter.data.title,
 		};
 	});
@@ -124,6 +124,6 @@ export const getStaticProps: GetStaticProps = async () => {
 		},
 	};
 };
-*/
+
 
 export default Index;
