@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
 import path from 'path';
 import grayMatter from 'gray-matter';
+import BlogHeader from "../components/BlogHeader"
 import AboutHeader from '../components/AboutHeader';
 import AboutParagraph from '../components/AboutParagraph';
 import Header from '../components/Header';
@@ -12,10 +13,12 @@ import { ShowMore } from '../styled-components/Button';
 import Hr from '../styled-components/Hr';
 import Colors from '../utils/Colors';
 import { Box } from '../styled-components/Box';
-import Link from 'next/link';
+import Link from '../styled-components/Link';
 import { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import fs from "fs/promises"
+import { List } from '../styled-components/List';
+
 
 interface IndexProps {
 	posts: {
@@ -53,9 +56,7 @@ export const Index: NextPage<IndexProps> = ({
 			) : (
 				<div className="#home">
 					{
-						//Ignoring this, fix later maybe?
-						//@ts-ignore
-						widthHeight?.width < 768 ? false : <Sticky />
+						(widthHeight as WindowSize)?.width < 768 ? false : <Sticky />
 					}
 					<Header />
 					<ScrollToProjects />
@@ -81,16 +82,25 @@ export const Index: NextPage<IndexProps> = ({
 					>
 						<Hr init_color={Colors.slate} hover_color={Colors.pinkish_purp} />
 					</Box>
+					{
+						/*
 					<Projects />
+					*/}
+					<br></br>
+					<BlogHeader />
 					<div className="post-links">
-						{posts.map((post) => {
+						<List color={Colors.darker_slate}>
+						{posts.map((post, i: number) => {
 							const { title, path } = post;
 							return (
-								<Link key={path} href={path}>
-									<a className={`post-${title}`}>{title}</a>
+								<li key={i}>
+								<Link href={path} color={Colors.darker_slate}	rel="noreferrer" target="_blank">
+								{title}
 								</Link>
+								</li>
 							);
 						})}
+						</List>
 					</div>
 				</div>
 			)}
@@ -112,15 +122,16 @@ export const getStaticProps: GetStaticProps = async () => {
 			};
 		})
 	);
-	const posts = files.map((f: any) => {
+	const posts = files.map((f) => {
 		return {
 			path: `/posts/${f.fileName.replace('.mdx', '')}`,
-			title: f.matter.data.title,
+			title: f.matter.data.title
 		};
 	});
 	return {
 		props: {
 			posts,
+		
 		},
 	};
 };
