@@ -14,7 +14,6 @@ export const Box = styled.div`
 	flex-direction: row;
 	flex-wrap: wrap;
 	> div {
-		transition: transform 0.2s ease-in-out;
 		margin: 25px;
 		margin-bottom: ${(props: BoxTypes) =>
 			props.bottom ? props.bottom : false};
@@ -29,8 +28,5 @@ export const Box = styled.div`
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		text-align: center;
 		font-family: 'Inter', 'Roboto', 'Oswald', 'SF Mono';
-	}
-	> div:hover {
-		transform: scale(1.02);
 	}
 `;

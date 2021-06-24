@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
 import path from 'path';
 import grayMatter from 'gray-matter';
-import BlogHeader from "../components/BlogHeader"
+import BlogHeader from '../components/BlogHeader';
 import AboutHeader from '../components/AboutHeader';
 import AboutParagraph from '../components/AboutParagraph';
 import Header from '../components/Header';
@@ -16,9 +16,8 @@ import { Box } from '../styled-components/Box';
 import Link from '../styled-components/Link';
 import { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/dist/client/router';
-import fs from "fs/promises"
+import fs from 'fs/promises';
 import { List } from '../styled-components/List';
-
 
 interface IndexProps {
 	posts: {
@@ -55,9 +54,7 @@ export const Index: NextPage<IndexProps> = ({
 				<Loading />
 			) : (
 				<div className="#home">
-					{
-						(widthHeight as WindowSize)?.width < 768 ? false : <Sticky />
-					}
+					{(widthHeight as WindowSize)?.width < 768 ? false : <Sticky />}
 					<Header />
 					<ScrollToProjects />
 					<AboutHeader />
@@ -74,32 +71,35 @@ export const Index: NextPage<IndexProps> = ({
 
 					<Box
 						width="600px"
-						height="325px"
+						height="350px"
 						background={Colors.lighter_navy}
 						color={Colors.pink_main}
 						size="16px"
 						radius="0px"
 					>
-						<Hr init_color={Colors.slate} hover_color={Colors.pinkish_purp} />
+						<Hr init_color={Colors.slate} hover_color={Colors.darker_slate} />
 					</Box>
-					{
-						/*
+					{/*
 					<Projects />
 					*/}
 					<br></br>
 					<BlogHeader />
-					<div className="post-links">
+					<div className="post-links" style={{ textAlign: 'center' }}>
 						<List color={Colors.darker_slate}>
-						{posts.map((post, i: number) => {
-							const { title, path } = post;
-							return (
-								<li key={i}>
-								<Link href={path} color={Colors.darker_slate}	rel="noreferrer" target="_blank">
-								{title}
-								</Link>
-								</li>
-							);
-						})}
+							{posts.map((post, i: number) => {
+								const { title, path } = post;
+								return (
+									<li key={i}>
+										<Link
+											href={path}
+											color={Colors.darker_slate}
+											rel="noreferrer"
+										>
+											Blog {i + 1}: {title}
+										</Link>
+									</li>
+								);
+							})}
 						</List>
 					</div>
 				</div>
@@ -125,16 +125,14 @@ export const getStaticProps: GetStaticProps = async () => {
 	const posts = files.map((f) => {
 		return {
 			path: `/posts/${f.fileName.replace('.mdx', '')}`,
-			title: f.matter.data.title
+			title: f.matter.data.title,
 		};
 	});
 	return {
 		props: {
 			posts,
-		
 		},
 	};
 };
-
 
 export default Index;

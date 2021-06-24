@@ -4,6 +4,10 @@ class Portfolio extends Document {
 		return (
 			<Html lang="en">
 				<Head>
+					<link
+						rel="stylesheet"
+						href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css"
+					/>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link

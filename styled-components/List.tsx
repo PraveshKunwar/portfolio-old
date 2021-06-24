@@ -5,7 +5,6 @@ export const List = styled.ul`
 	text-align: center;
 	list-style: none;
 	> li {
-		text-align: center;
 		color: ${(props: ListTypes) => (props.color ? props.color : false)};
 	}
 `;

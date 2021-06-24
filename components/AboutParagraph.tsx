@@ -8,7 +8,9 @@ const AboutParagraph: React.FC = () => {
 			<Box
 				width="600px"
 				height="325px"
-				background={Colors.lighter_navy}
+				background="
+				#03071e
+				"
 				color={Colors.pink_main}
 				size="16px"
 				radius="0px"

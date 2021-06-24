@@ -12,7 +12,7 @@ export const ShowMore = styled.button`
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 30px;
-	background: #112240;
+	background: #03071e;
 	background-size: 200%;
 	transition: 0.5s ease-out;
 	&:visited {

@@ -12,6 +12,9 @@ import {
 	Node,
 	Bss,
 	Rust,
+	VS,
+	NextJS,
+	Python,
 } from '../assets/svg/SVG_Icons';
 import Hr from '../styled-components/Hr';
 const Personal: React.FC = () => {
@@ -91,7 +94,7 @@ const Personal: React.FC = () => {
 			<Box
 				width="200px"
 				height="200px"
-				background={Colors.blue_main}
+				background="#03071e"
 				color={Colors.darker_slate}
 				size="16px"
 				radius="50%"
@@ -184,6 +187,36 @@ const Personal: React.FC = () => {
 					<p style={{ color: Colors.slate }}>
 						<b style={{ color: Colors.pink_main }}>▹ </b>
 						<b>Experience</b> - 35%
+					</p>
+				</div>
+				<div className="?lang_vs">
+					<VS />
+					<p>
+						<b style={{ color: Colors.gold }}>Visual Studio Code</b>
+					</p>
+					<p style={{ color: Colors.slate }}>
+						<b style={{ color: Colors.pink_main }}>▹ </b>
+						<b>Experience</b> - 100%
+					</p>
+				</div>
+				<div className="?lang_next">
+					<NextJS />
+					<p>
+						<b style={{ color: Colors.gold }}>Next.JS</b>
+					</p>
+					<p style={{ color: Colors.slate }}>
+						<b style={{ color: Colors.pink_main }}>▹ </b>
+						<b>Experience</b> - 85%
+					</p>
+				</div>
+				<div className="?lang_python">
+					<Python />
+					<p>
+						<b style={{ color: Colors.gold }}>Python</b>
+					</p>
+					<p style={{ color: Colors.slate }}>
+						<b style={{ color: Colors.pink_main }}>▹ </b>
+						<b>Experience</b> - 75%
 					</p>
 				</div>
 			</Box>
