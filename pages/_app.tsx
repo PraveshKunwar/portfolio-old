@@ -1,7 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 	return (
 		<>
@@ -17,12 +16,14 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 			</Head>
 			<style jsx global>{`
 				body {
-					background-color: #141413;
+					text-align: center;
+					background-color: #000000;
+					color: #7e8dbd;
+					border: none;
 				}
 			`}</style>
-		
+
 			<Component {...pageProps} />
-		
 		</>
 	);
 };
