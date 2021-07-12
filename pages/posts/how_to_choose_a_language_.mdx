@@ -5,6 +5,7 @@ Post: What language should I start off with?
 import Badge from 'react-bootstrap/Badge';
 import { AboutMeParagraph as Para } from '../../styled-components/Paragraph';
 import { AboutMeHeader as Header } from '../../styled-components/Header';
+import { List } from '../../styled-components/List';
 
 <div className="dark-background">
 	<Badge
@@ -55,16 +56,24 @@ import { AboutMeHeader as Header } from '../../styled-components/Header';
 		<Header color="#7e8dbd" size="36px">
 			Table of Contents
 		</Header> <br></br>
-		<Para color="#7e8dbd">
-			<ul>
-				<li>
-					<a href="#part-1-htcl">What is "programming"?</a>
-				</li>
-				<li>
-					<a href="#part-2-htcl">What is web development?</a>
-				</li>
-			</ul>
-		</Para>
+		<List color="#7e8dbd">
+			<li>
+				<a
+					href="#part-1-htcl"
+					style={{ color: '#dc3545', textDecoration: 'none' }}
+				>
+					1. What is "programming"?
+				</a>
+			</li>
+			<li>
+				<a
+					href="#part-2-htcl"
+					style={{ color: '#dc3545', textDecoration: 'none' }}
+				>
+					2. What is web development?
+				</a>
+			</li>
+		</List>
 		<br></br>
 		<Para color="#7e8dbd">
 			When it comes to choosing a programming language, it can be a bit

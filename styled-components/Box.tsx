@@ -1,13 +1,7 @@
 import styled from 'styled-components';
-//@ts-ignore
-import SFMono_Regular from '../assets/fonts/SFMono_Regular.otf';
 import { BoxTypes } from '../interfaces/BoxTypes';
 
 export const Box = styled.div`
-	@font-face {
-		font-family: 'SF Mono';
-		src: local('SF Mono'), url(${SFMono_Regular});
-	}
 	display: flex;
 	justify-content: center;
 	align-items: center;
