@@ -1,12 +1,107 @@
 ---
-title: What language should I start off with?
+Post: What language should I start off with?
 ---
 
-<img
-	src="https://wallpaperaccess.com/full/796843.png"
-	width="500"
-	height="500"
-/>
+import Badge from 'react-bootstrap/Badge';
+import { AboutMeParagraph as Para } from '../../styled-components/Paragraph';
+import { AboutMeHeader as Header } from '../../styled-components/Header';
 
-<div>
+<div className="dark-background">
+	<Badge
+		pill
+		variant="primary"
+		style={{ background: '#dc3545', marginLeft: '3px', fontSize: '14px' }}
+	>
+		10 Min Read
+	</Badge>
+	<Badge
+		pill
+		variant="primary"
+		style={{ background: '#0094ca', marginLeft: '3px', fontSize: '14px' }}
+	>
+		July 11th, 2021.
+	</Badge>
+	{[
+		'PraveshK',
+		'Programmer',
+		'Developer',
+		'Frontend',
+		'Backend',
+		'Web Developer',
+		'Systems Developer',
+		'Machine Learning',
+	].map((post, i) => {
+		return (
+			<Badge
+				key={i}
+				pill
+				variant="primary"
+				style={{ background: '#0a192f', marginLeft: '3px', fontSize: '14px' }}
+			>
+				{post}
+			</Badge>
+		);
+	})}
+	<div className="content">
+		<br></br>
+		<img
+			src="https://i2.wp.com/allhtaccess.info/wp-content/uploads/2018/03/programming.gif?fit=1281%2C716&ssl=1"
+			alt="gif"
+			width="450px"
+			height="300px"
+		/>
+		<br></br>
+		<br></br>
+		<Header color="#7e8dbd" size="36px">
+			Table of Contents
+		</Header> <br></br>
+		<Para color="#7e8dbd">
+			<ul>
+				<li>
+					<a href="#part-1-htcl">What is "programming"?</a>
+				</li>
+				<li>
+					<a href="#part-2-htcl">What is web development?</a>
+				</li>
+			</ul>
+		</Para>
+		<br></br>
+		<Para color="#7e8dbd">
+			When it comes to choosing a programming language, it can be a bit
+			overwhelming to choose which language in particular to pick. <br></br>It seems
+			that there are so many languages out there in the programming world, but hopefully
+			by the end of this blog, <br></br>you will get a good understanding of
+			what languages are popular and why they are so popular!
+		</Para>
+		<br></br>
+		<br></br>
+		<div id="part-1-htcl">
+			<Badge
+				pill
+				variant="primary"
+				style={{ background: '#17a2b8', marginLeft: '3px', fontSize: '14px' }}
+			>
+				Part 1 ✅
+			</Badge>
+			<Header color="#7e8dbd" size="24px" id="part-1-htcl">
+				What is "programming"?
+			</Header>
+			<Para color="#7e8dbd">-- Some Content --</Para>
+		</div>
+		<br></br>
+		<br></br>
+		<div id="part-2-htcl">
+			<Badge
+				pill
+				variant="primary"
+				style={{ background: '#17a2b8', marginLeft: '3px', fontSize: '14px' }}
+			>
+				Part 2 ✅
+			</Badge>
+			<Header color="#7e8dbd" size="24px" id="part-2-htcl">
+				What is web development?
+			</Header>
+			<Para color="#7e8dbd">-- Some Content --</Para>
+		</div>
+	</div>
 </div>

@@ -20,6 +20,11 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 					background-color: #000000;
 					color: #7e8dbd;
 					border: none;
+					margin-top: 2rem;
+					font-family: 'Inter';
+				}
+				hr {
+					background: #000000;
 				}
 			`}</style>
 

@@ -12,4 +12,5 @@ export interface AboutParaTypes {
 	size?: string;
 	top?: string;
 	color: string;
+	aligned?: string;
 }

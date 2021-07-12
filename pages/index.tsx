@@ -22,7 +22,7 @@ import { List } from '../styled-components/List';
 interface IndexProps {
 	posts: {
 		path: string;
-		title: any;
+		Post: any;
 	}[];
 }
 
@@ -87,7 +87,7 @@ export const Index: NextPage<IndexProps> = ({
 					<div className="post-links" style={{ textAlign: 'center' }}>
 						<List color={Colors.darker_slate}>
 							{posts.map((post, i: number) => {
-								const { title, path } = post;
+								const { Post, path } = post;
 								return (
 									<li key={i}>
 										<Link
@@ -95,7 +95,7 @@ export const Index: NextPage<IndexProps> = ({
 											color={Colors.darker_slate}
 											rel="noreferrer"
 										>
-											Blog {i + 1}: {title}
+											Blog {i + 1}: {Post}
 										</Link>
 									</li>
 								);
@@ -125,7 +125,7 @@ export const getStaticProps: GetStaticProps = async () => {
 	const posts = files.map((f) => {
 		return {
 			path: `/posts/${f.fileName.replace('.mdx', '')}`,
-			title: f.matter.data.title,
+			Post: f.matter.data.Post,
 		};
 	});
 	return {

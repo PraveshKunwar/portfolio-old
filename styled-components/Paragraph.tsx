@@ -5,7 +5,8 @@ export const AboutMeParagraph = styled.p`
 	font-size: ${(props: AboutParaTypes) => (props.size ? props.size : '16px')};
 	margin-top: ${(props: AboutParaTypes) => (props.top ? props.top : false)};
 	color: ${(props: AboutParaTypes) => (props.color ? props.color : false)};
-	text-align: center;
+	text-align: ${(props: AboutParaTypes) =>
+		props.aligned ? props.aligned : 'center'};
 	font-family: 'Inter', 'Roboto', 'Oswald';
 	animation: fadeIn ease 3s;
 	-webkit-animation: fadeIn ease 3s;
