@@ -79,9 +79,6 @@ export const Index: NextPage<IndexProps> = ({
 					>
 						<Hr init_color={Colors.slate} hover_color={Colors.darker_slate} />
 					</Box>
-					{/*
-					<Projects />
-					*/}
 					<br></br>
 					<BlogHeader />
 					<div className="post-links" style={{ textAlign: 'center' }}>
