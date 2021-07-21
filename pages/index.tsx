@@ -58,6 +58,27 @@ export const Index: NextPage<IndexProps> = ({
 					<Header />
 					<ScrollToProjects />
 					<AboutHeader />
+					<br></br>
+					<BlogHeader />
+					<div className="post-links" style={{ textAlign: 'center' }}>
+						<List color={Colors.darker_slate}>
+							{posts.map((post, i: number) => {
+								const { Post, path } = post;
+								return (
+									<li key={i}>
+										<Link
+											size="20px"
+											href={path}
+											color={Colors.slate}
+											rel="noreferrer"
+										>
+											Blog {i + 1}: {Post}
+										</Link>
+									</li>
+								);
+							})}
+						</List>
+					</div>
 					<AboutParagraph />
 					<ShowMore
 						color={Colors.slate}
@@ -80,25 +101,6 @@ export const Index: NextPage<IndexProps> = ({
 						<Hr init_color={Colors.slate} hover_color={Colors.darker_slate} />
 					</Box>
 					<br></br>
-					<BlogHeader />
-					<div className="post-links" style={{ textAlign: 'center' }}>
-						<List color={Colors.darker_slate}>
-							{posts.map((post, i: number) => {
-								const { Post, path } = post;
-								return (
-									<li key={i}>
-										<Link
-											href={path}
-											color={Colors.darker_slate}
-											rel="noreferrer"
-										>
-											Blog {i + 1}: {Post}
-										</Link>
-									</li>
-								);
-							})}
-						</List>
-					</div>
 				</div>
 			)}
 		</div>

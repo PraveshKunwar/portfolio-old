@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { LinkTypes } from '../interfaces/LinkTypes';
 const Link = styled.a`
 	color: ${(props: LinkTypes) => (props.color ? props.color : false)};
+	font-size: ${(props: LinkTypes) => (props.size ? props.size : false)};
 	font-family: 'Inter', 'Roboto', 'Oswald';
 	text-decoration: none;
 
 	&:hover {
-			color: ${(props: LinkTypes) => (props.color ? props.color : false)};
+		color: ${(props: LinkTypes) => (props.color ? props.color : false)};
 	}
 
 	&:active {

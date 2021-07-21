@@ -1,3 +1,4 @@
 export interface LinkTypes {
-  color: string;
+	color: string;
+	size?: string;
 }
