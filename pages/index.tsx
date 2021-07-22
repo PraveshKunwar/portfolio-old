@@ -23,6 +23,7 @@ interface IndexProps {
 	posts: {
 		path: string;
 		Post: any;
+		date: any;
 	}[];
 }
 
@@ -63,7 +64,7 @@ export const Index: NextPage<IndexProps> = ({
 					<div className="post-links" style={{ textAlign: 'center' }}>
 						<List color={Colors.darker_slate}>
 							{posts.map((post, i: number) => {
-								const { Post, path } = post;
+								const { Post, path, date } = post;
 								return (
 									<li key={i}>
 										<Link
@@ -72,7 +73,7 @@ export const Index: NextPage<IndexProps> = ({
 											color={Colors.slate}
 											rel="noreferrer"
 										>
-											Blog {i + 1}: {Post}
+											Blog {i + 1}: {Post} - {date}
 										</Link>
 									</li>
 								);
@@ -125,6 +126,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		return {
 			path: `/posts/${f.fileName.replace('.mdx', '')}`,
 			Post: f.matter.data.Post,
+			date: f.matter.data.date,
 		};
 	});
 	return {
