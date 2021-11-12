@@ -7,7 +7,6 @@ import AboutHeader from '../components/AboutHeader';
 import AboutParagraph from '../components/AboutParagraph';
 import Header from '../components/Header';
 import ScrollToProjects from '../components/ScrollTo';
-import Projects from '../components/Projects';
 import Sticky from '../components/Sticky';
 import { ShowMore } from '../styled-components/Button';
 import Hr from '../styled-components/Hr';
@@ -59,6 +58,7 @@ export const Index: NextPage<IndexProps> = ({
 					<Header />
 					<ScrollToProjects />
 					<AboutHeader />
+					<AboutParagraph />
 					<br></br>
 					<BlogHeader />
 					<div className="post-links" style={{ textAlign: 'center' }}>
@@ -80,16 +80,6 @@ export const Index: NextPage<IndexProps> = ({
 							})}
 						</List>
 					</div>
-					<AboutParagraph />
-					<ShowMore
-						color={Colors.slate}
-						radius="10px"
-						onClick={() => {
-							router.push('/about');
-						}}
-					>
-						Learn More
-					</ShowMore>
 
 					<Box
 						width="600px"
